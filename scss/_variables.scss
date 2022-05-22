@@ -1,0 +1,23 @@
+$primary: #56C4C5;
+$secondary: #ff5d50;
+$hover: #ff785e;
+$black1: #373a3c;
+$black2: #494846;
+$black3: #636057;
+$black4: #858377;
+$black5: #999;
+$black6: #e8e8db;
+$font-primary: "Noto Sans TC";
+$font-secondary: "Baloo Tamma 2";
+$max-width: 1156px;
+$breakpoint: (
+  "sm":  576px,
+  "md": 768px,
+  "lg": 768px
+);
+$direction: (
+  "t": top,
+  "r": right,
+  "b": bottom,
+  "l": left
+);

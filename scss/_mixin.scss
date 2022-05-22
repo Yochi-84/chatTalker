@@ -1,0 +1,40 @@
+@mixin pc {
+  @media screen and (min-width: map-get($breakpoint, "lg")) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media screen and (max-width: map-get($breakpoint, "md")) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: map-get($breakpoint, "sm")) {
+    @content;
+  }
+}
+
+@mixin font( $fs: 1rem, $fw: 400, $lh: 1, $ff: $font-primary) {
+  font-size: $fs;
+
+  @if $ff != $font-primary {
+    font-family: $ff, serif;
+  }
+
+  @if $lh != 400 {
+    font-weight: $fw;
+  }
+
+  @if $lh != 1 {
+    line-height: $lh;
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

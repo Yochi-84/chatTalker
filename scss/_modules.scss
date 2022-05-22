@@ -1,0 +1,17 @@
+.container {
+  max-width: 1088px;
+  margin: 0 auto;
+}
+
+.btn{
+  display: block;
+  line-height: 1.5rem;
+  padding: 8px 32px;
+  border-radius: 1.375em;
+  font-weight: 400;
+}
+
+.btn-secondary {
+  background-color: $secondary;
+  color: #fff;
+}

@@ -1,0 +1,341 @@
+@each $dir, $dir-value in $direction {
+  .m#{$dir}-0 {
+    margin-#{$dir-value}: 0;
+  }
+
+  .p#{$dir}-0 {
+    padding-#{$dir-value}: 0;
+  }
+
+  @for $min-distance from 1 through 7 {
+    .m#{$dir}-0-#{$min-distance} {
+      margin-#{$dir-value}: #{$min-distance}px;
+    }
+
+    .p#{$dir}-0-#{$min-distance} {
+      padding-#{$dir-value}: #{$min-distance}px;
+    }
+  }
+
+  @for $distance from 1 through 12 {
+    .m#{$dir}-#{$distance} {
+      margin-#{$dir-value}: ($distance * 0.5) + rem;
+    }
+
+    .p-#{$distance} {
+      padding: ($distance * 0.5) + rem;
+    }
+
+    .p#{$dir}-#{$distance} {
+      padding-#{$dir-value}: ($distance * 0.5) + rem;
+    }
+
+    @for $min-distance from 1 through 7 {
+      .m#{$dir}-#{$distance}-#{$min-distance} {
+        margin-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+      }
+
+      .p-#{$distance}-#{$min-distance} {
+        padding: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+      }
+
+      .p#{$dir}-#{$distance}-#{$min-distance} {
+        padding-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+      }
+    }
+  }
+}
+
+@each $size, $size-value in $breakpoint {
+  @if $size == "lg" {
+    @media screen and (min-width: $size-value) {
+      @each $dir, $dir-value in $direction {
+        .m#{$dir}-#{$size}-0 {
+          margin-#{$dir-value}: 0;
+        }
+
+        .p#{$dir}-#{$size}-0 {
+          padding-#{$dir-value}: 0;
+        }
+
+        @for $min-distance from 1 through 7 {
+          .m#{$dir}-#{$size}-0-#{$min-distance} {
+            margin-#{$dir-value}: #{$min-distance}px;
+          }
+
+          .p#{$dir}-#{$size}-0-#{$min-distance} {
+            padding-#{$dir-value}: #{$min-distance}px;
+          }
+        }
+
+        @for $distance from 1 through 12 {
+          .m#{$dir}-#{$size}-#{$distance} {
+            margin-#{$dir-value}: ($distance * 0.5) + rem;
+          }
+
+          .p-#{$size}-#{$distance} {
+            padding: ($distance * 0.5) + rem;
+          }
+
+          .p#{$dir}-#{$size}-#{$distance} {
+            padding-#{$dir-value}: ($distance * 0.5) + rem;
+          }
+
+          @for $min-distance from 1 through 7 {
+            .m#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
+              margin-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+            }
+
+            .p-#{$size}-#{$distance}-#{$min-distance} {
+              padding: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+            }
+
+            .p#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
+              padding-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+            }
+          }
+        }
+      }
+    }
+  } @else {
+    @media screen and (max-width: $size-value) {
+      @each $dir, $dir-value in $direction {
+        .m#{$dir}-#{$size}-0 {
+          margin-#{$dir-value}: 0;
+        }
+
+        .p#{$dir}-#{$size}-0 {
+          padding-#{$dir-value}: 0;
+        }
+
+        @for $min-distance from 1 through 7 {
+          .m#{$dir}-#{$size}-0-#{$min-distance} {
+            margin-#{$dir-value}: #{$min-distance}px;
+          }
+
+          .p#{$dir}-#{$size}-0-#{$min-distance} {
+            padding-#{$dir-value}: #{$min-distance}px;
+          }
+        }
+
+        @for $distance from 1 through 12 {
+          .m#{$dir}-#{$size}-#{$distance} {
+            margin-#{$dir-value}: ($distance * 0.5) + rem;
+          }
+
+          .p-#{$size}-#{$distance} {
+            padding: ($distance * 0.5) + rem;
+          }
+
+          .p#{$dir}-#{$size}-#{$distance} {
+            padding-#{$dir-value}: ($distance * 0.5) + rem;
+          }
+
+          @for $min-distance from 1 through 7 {
+            .m#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
+              margin-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+            }
+
+            .p-#{$size}-#{$distance}-#{$min-distance} {
+              padding: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+            }
+
+            .p#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
+              padding-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@for $distance from 1 through 12 {
+  .px-#{$distance} {
+    padding-right: ($distance * 0.5) + rem;
+    padding-left: ($distance * 0.5) + rem;
+  }
+
+  .py-#{$distance} {
+    padding-top: ($distance * 0.5) + rem;
+    padding-bottom: ($distance * 0.5) + rem;
+  }
+}
+
+@each $size, $size-value in $breakpoint {
+  @if $size == "lg" {
+    @media screen and (min-width: $size-value) {
+      @for $distance from 1 through 12 {
+        .px-#{$size}-#{$distance} {
+          padding-right: ($distance * 0.5) + rem;
+          padding-left: ($distance * 0.5) + rem;
+        }
+
+        .py-#{$size}-#{$distance} {
+          padding-top: ($distance * 0.5) + rem;
+          padding-bottom: ($distance * 0.5) + rem;
+        }
+      }
+    }
+  } @else {
+    @media screen and (max-width: $size-value) {
+      @for $distance from 1 through 12 {
+        .px-#{$size}-#{$distance} {
+          padding-right: ($distance * 0.5) + rem;
+          padding-left: ($distance * 0.5) + rem;
+        }
+
+        .py-#{$size}-#{$distance} {
+          padding-top: ($distance * 0.5) + rem;
+          padding-bottom: ($distance * 0.5) + rem;
+        }
+      }
+    }
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.fs-0 {
+  font-size: 0;
+}
+
+.fs-1 {
+  font-size: 0.5rem;
+}
+
+.fs-2 {
+  font-size: 1rem;
+}
+
+.fs-3 {
+  font-size: 1.5rem;
+}
+
+.fs-4 {
+  font-size: 2rem;
+}
+
+.fs-5 {
+  font-size: 2.5rem;
+}
+
+.fs-6 {
+  font-size: 3rem;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-9 {
+  font-weight: 900;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.p-sticky {
+  position: sticky;
+}
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-primary {
+  color: $primary;
+}
+
+.color-secondary {
+  color: $hover;
+}
+
+.circle {
+  border-radius: 50%;
+}

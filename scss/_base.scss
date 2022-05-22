@@ -1,0 +1,34 @@
+body {
+  font-family: $font-primary, serif;
+}
+
+a {
+  text-decoration: none;
+  color: $black3;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+input {
+  background-color: #f7f7f7;
+  border: 0;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.is-error {
+    border: 1px solid $hover;
+  }
+}
+
+input,
+textarea,
+button,
+select,
+a,
+li,
+label {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
