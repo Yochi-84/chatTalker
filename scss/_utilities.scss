@@ -1,3 +1,15 @@
+@for $distance from 1 through 12 {
+  .p-#{$distance} {
+    padding: ($distance * 0.5) + rem;
+  }
+
+  @for $min-distance from 1 through 7 {
+    .p-#{$distance}-#{$min-distance} {
+      padding: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+    }
+  }
+}
+
 @each $dir, $dir-value in $direction {
   .m#{$dir}-0 {
     margin-#{$dir-value}: 0;
@@ -22,10 +34,6 @@
       margin-#{$dir-value}: ($distance * 0.5) + rem;
     }
 
-    .p-#{$distance} {
-      padding: ($distance * 0.5) + rem;
-    }
-
     .p#{$dir}-#{$distance} {
       padding-#{$dir-value}: ($distance * 0.5) + rem;
     }
@@ -33,10 +41,6 @@
     @for $min-distance from 1 through 7 {
       .m#{$dir}-#{$distance}-#{$min-distance} {
         margin-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
-      }
-
-      .p-#{$distance}-#{$min-distance} {
-        padding: calc(0.5 * #{$distance}rem + #{$min-distance}px);
       }
 
       .p#{$dir}-#{$distance}-#{$min-distance} {
@@ -47,102 +51,50 @@
 }
 
 @each $size, $size-value in $breakpoint {
-  @if $size == "lg" {
-    @media screen and (min-width: $size-value) {
-      @each $dir, $dir-value in $direction {
-        .m#{$dir}-#{$size}-0 {
-          margin-#{$dir-value}: 0;
+  @media screen and (max-width: $size-value) {
+    @each $dir, $dir-value in $direction {
+      .m#{$dir}-#{$size}-0 {
+        margin-#{$dir-value}: 0;
+      }
+
+      .p#{$dir}-#{$size}-0 {
+        padding-#{$dir-value}: 0;
+      }
+
+      @for $min-distance from 1 through 7 {
+        .m#{$dir}-#{$size}-0-#{$min-distance} {
+          margin-#{$dir-value}: #{$min-distance}px;
         }
 
-        .p#{$dir}-#{$size}-0 {
-          padding-#{$dir-value}: 0;
-        }
-
-        @for $min-distance from 1 through 7 {
-          .m#{$dir}-#{$size}-0-#{$min-distance} {
-            margin-#{$dir-value}: #{$min-distance}px;
-          }
-
-          .p#{$dir}-#{$size}-0-#{$min-distance} {
-            padding-#{$dir-value}: #{$min-distance}px;
-          }
-        }
-
-        @for $distance from 1 through 12 {
-          .m#{$dir}-#{$size}-#{$distance} {
-            margin-#{$dir-value}: ($distance * 0.5) + rem;
-          }
-
-          .p-#{$size}-#{$distance} {
-            padding: ($distance * 0.5) + rem;
-          }
-
-          .p#{$dir}-#{$size}-#{$distance} {
-            padding-#{$dir-value}: ($distance * 0.5) + rem;
-          }
-
-          @for $min-distance from 1 through 7 {
-            .m#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
-              margin-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
-            }
-
-            .p-#{$size}-#{$distance}-#{$min-distance} {
-              padding: calc(0.5 * #{$distance}rem + #{$min-distance}px);
-            }
-
-            .p#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
-              padding-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
-            }
-          }
+        .p#{$dir}-#{$size}-0-#{$min-distance} {
+          padding-#{$dir-value}: #{$min-distance}px;
         }
       }
-    }
-  } @else {
-    @media screen and (max-width: $size-value) {
-      @each $dir, $dir-value in $direction {
-        .m#{$dir}-#{$size}-0 {
-          margin-#{$dir-value}: 0;
+
+      @for $distance from 1 through 12 {
+        .m#{$dir}-#{$size}-#{$distance} {
+          margin-#{$dir-value}: ($distance * 0.5) + rem;
         }
 
-        .p#{$dir}-#{$size}-0 {
-          padding-#{$dir-value}: 0;
+        .p-#{$size}-#{$distance} {
+          padding: ($distance * 0.5) + rem;
+        }
+
+        .p#{$dir}-#{$size}-#{$distance} {
+          padding-#{$dir-value}: ($distance * 0.5) + rem;
         }
 
         @for $min-distance from 1 through 7 {
-          .m#{$dir}-#{$size}-0-#{$min-distance} {
-            margin-#{$dir-value}: #{$min-distance}px;
+          .m#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
+            margin-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
           }
 
-          .p#{$dir}-#{$size}-0-#{$min-distance} {
-            padding-#{$dir-value}: #{$min-distance}px;
-          }
-        }
-
-        @for $distance from 1 through 12 {
-          .m#{$dir}-#{$size}-#{$distance} {
-            margin-#{$dir-value}: ($distance * 0.5) + rem;
+          .p-#{$size}-#{$distance}-#{$min-distance} {
+            padding: calc(0.5 * #{$distance}rem + #{$min-distance}px);
           }
 
-          .p-#{$size}-#{$distance} {
-            padding: ($distance * 0.5) + rem;
-          }
-
-          .p#{$dir}-#{$size}-#{$distance} {
-            padding-#{$dir-value}: ($distance * 0.5) + rem;
-          }
-
-          @for $min-distance from 1 through 7 {
-            .m#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
-              margin-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
-            }
-
-            .p-#{$size}-#{$distance}-#{$min-distance} {
-              padding: calc(0.5 * #{$distance}rem + #{$min-distance}px);
-            }
-
-            .p#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
-              padding-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
-            }
+          .p#{$dir}-#{$size}-#{$distance}-#{$min-distance} {
+            padding-#{$dir-value}: calc(0.5 * #{$distance}rem + #{$min-distance}px);
           }
         }
       }
@@ -160,35 +112,31 @@
     padding-top: ($distance * 0.5) + rem;
     padding-bottom: ($distance * 0.5) + rem;
   }
+
+  @for $min-distance from 1 through 7 {
+    .px-#{$distance}-#{$min-distance} {
+      padding-right: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+      padding-left: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+    }
+
+    .py-#{$distance}-#{$min-distance} {
+      padding-top: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+      padding-bottom: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+    }
+  }
 }
 
 @each $size, $size-value in $breakpoint {
-  @if $size == "lg" {
-    @media screen and (min-width: $size-value) {
-      @for $distance from 1 through 12 {
-        .px-#{$size}-#{$distance} {
-          padding-right: ($distance * 0.5) + rem;
-          padding-left: ($distance * 0.5) + rem;
-        }
-
-        .py-#{$size}-#{$distance} {
-          padding-top: ($distance * 0.5) + rem;
-          padding-bottom: ($distance * 0.5) + rem;
-        }
+  @media screen and (max-width: $size-value) {
+    @for $distance from 1 through 12 {
+      .px-#{$size}-#{$distance} {
+        padding-right: ($distance * 0.5) + rem;
+        padding-left: ($distance * 0.5) + rem;
       }
-    }
-  } @else {
-    @media screen and (max-width: $size-value) {
-      @for $distance from 1 through 12 {
-        .px-#{$size}-#{$distance} {
-          padding-right: ($distance * 0.5) + rem;
-          padding-left: ($distance * 0.5) + rem;
-        }
 
-        .py-#{$size}-#{$distance} {
-          padding-top: ($distance * 0.5) + rem;
-          padding-bottom: ($distance * 0.5) + rem;
-        }
+      .py-#{$size}-#{$distance} {
+        padding-top: ($distance * 0.5) + rem;
+        padding-bottom: ($distance * 0.5) + rem;
       }
     }
   }
@@ -278,6 +226,10 @@
   justify-content: center;
 }
 
+.justify-content-between {
+  justify-content: space-between;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -333,7 +285,7 @@
 }
 
 .color-secondary {
-  color: $hover;
+  color: $secondary;
 }
 
 .circle {

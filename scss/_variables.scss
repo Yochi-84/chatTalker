@@ -1,19 +1,15 @@
-$primary: #56C4C5;
+$primary: #56c4c5;
 $secondary: #ff5d50;
-$hover: #ff785e;
-$black1: #373a3c;
-$black2: #494846;
-$black3: #636057;
-$black4: #858377;
-$black5: #999;
-$black6: #e8e8db;
+$info-black: #221e1f;
+$reply-gray: #747474;
 $font-primary: "Noto Sans TC";
-$font-secondary: "Baloo Tamma 2";
+$font-secondary: "Comfortaa";
+$font-third: "Wendy One";
 $max-width: 1156px;
 $breakpoint: (
-  "sm":  576px,
+  "lg": 1156px,
   "md": 768px,
-  "lg": 768px
+  "sm":  576px
 );
 $direction: (
   "t": top,

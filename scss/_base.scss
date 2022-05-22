@@ -1,26 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-primary, serif;
+  color: $info-black;
 }
 
 a {
   text-decoration: none;
-  color: $black3;
   transition: 0.3s;
-  cursor: pointer;
-}
-
-input {
-  background-color: #f7f7f7;
-  border: 0;
-  border-radius: 4px;
-
-  &:focus {
-    outline: none;
-  }
-
-  &.is-error {
-    border: 1px solid $hover;
-  }
 }
 
 input,

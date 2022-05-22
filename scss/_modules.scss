@@ -1,17 +1,46 @@
 .container {
-  max-width: 1088px;
   margin: 0 auto;
+  max-width: 1088px;
 }
 
-.btn{
-  display: block;
+.top {
+  @include font(1.125rem, 400, 1.125rem, $font-third);
+
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 71px;
+  height: 71px;
+  color: #fff;
+  background-color: $primary;
+  border-radius: 50%;
+}
+
+.btn {
+  display: inline-block;
   line-height: 1.5rem;
-  padding: 8px 32px;
   border-radius: 1.375em;
   font-weight: 400;
 }
 
-.btn-secondary {
-  background-color: $secondary;
+.btn-primary {
+  @include font(1.125rem, 400, 1.625rem, $font-secondary);
+
+  padding: 12px 32px;
   color: #fff;
+  background-color: $primary;
+
+  &:hover {
+    background-color: $secondary;
+  }
+}
+
+.btn-secondary {
+  padding: 8px 32px;
+  color: #fff;
+  background-color: $secondary;
+
+  &:hover {
+    background-color: $primary;
+  }
 }
