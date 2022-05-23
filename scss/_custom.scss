@@ -1,18 +1,11 @@
 .main-text {
   padding: 158px 0 157px;
 
-  span {
-    @include font(1.125rem, 700, 1.625rem);
-
-    display: block;
-    color: $primary;
-  }
-
   h1 {
-    @include font(3rem, 700, 4.375rem);
+    @include font(1.125rem, 700, 1.625rem);
   }
+}
 
-  small {
-    @include font(1.25rem, 400, 1.8125rem);
-  }
+.project-text {
+  padding: 92px 0 269px;
 }

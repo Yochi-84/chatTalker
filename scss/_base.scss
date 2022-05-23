@@ -12,6 +12,24 @@ a {
   transition: 0.3s;
 }
 
+h2 {
+  @include font(2rem, 700, 2.875rem);
+}
+
+strong {
+  @include font(3rem, 700, 4.375rem);
+
+  display: block;
+}
+
+small {
+  @include font(1.25rem, 400, 1.8125rem);
+}
+
+span {
+  @include font(1rem, 400, 1.5rem);
+}
+
 input,
 textarea,
 button,
