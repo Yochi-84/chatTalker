@@ -443,6 +443,7 @@ nav .logo img {
   border-bottom: 1px solid #ddd;
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
+  min-height: 6rem;
 }
 
 .comment-list h4 {
@@ -681,8 +682,8 @@ nav .logo img {
   position: relative;
   padding: 1rem 2rem;
   cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .faq-q::before, .faq-q::after {
@@ -714,21 +715,21 @@ nav .logo img {
   display: none;
 }
 
+.faq-q.is-open + .faq-a {
+  padding: 8px 32px 32px;
+  max-height: 100vh;
+}
+
 .faq-a {
   font-size: 1rem;
   font-weight: 400;
   line-height: 2rem;
   overflow: hidden;
-  padding: 0 32px 0;
+  padding: 0 32px;
   max-height: 0;
   color: #747474;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.faq-a.is-open {
-  max-height: 100vh;
-  padding: 8px 32px 32px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .faq li:not(:last-of-type) {
@@ -16729,6 +16730,10 @@ nav .logo img {
 
 .text-left {
   text-align: left;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .d-none {

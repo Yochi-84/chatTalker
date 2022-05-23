@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
-  <a href="#top" class="top flex-center">TOP</a>
-  <section id="top" class="bg-main">
+  <a href="#" id="top" class="top flex-center">TOP</a>
+  <section class="bg-main">
     <nav class="nav container mb-3-6">
       <h2 class="logo">
         <a href="index.html"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/logo.png" alt="chatTalker"></a>
@@ -82,7 +82,7 @@
     </div>
   </section>
   <section class="bg-rgb">
-    <div class="feature-block container mt-12-4">
+    <div class="feature-block container pt-12-4">
       <div class="mr-5-6">
         <h2 class="mb-2">快速了解客戶輪廓<br>建立品牌流量池</h2>
         <p class="mb-3">深入用戶日常，成為用戶貼身好友<br>精準傳遞品牌資訊，打造個人化專屬服務<br>不知不覺深入用戶生活，成為用戶貼心的好朋朋:D</p>
@@ -123,69 +123,16 @@
   <section class="bg-lyf">
     <div class="text-center container mt-12-4">
       <h2>好評如潮</h2>
-      <ul class="comment-list mb-3">
-        <li>
-          <div class="user-image circle">
-            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/user01.jpg" alt="Lina 執行長">
-          </div>
-          <p>原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。</p>
-          <h4>清心寡慾設計公司</h4>
-          <div class="d-flex justify-content-between">
-            <span>Lina 執行長</span>
-            <span>
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-            </span>
-          </di>
-        </li>
-        <li>
-          <div class="user-image circle">
-            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/user02.jpg" alt="Zoe 活動長">
-          </div>
-          <p>團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！</p>
-          <h4>subwhat 行銷公司</h4>
-          <div class="d-flex justify-content-between">
-            <span>Zoe 活動長</span>
-            <span>
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-            </span>
-          </di>
-        </li>
-        <li>
-          <div class="user-image circle">
-            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/user03.jpg" alt="HowBig">
-          </div>
-          <p>經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～</p>
-          <h4>油土伯</h4>
-          <div class="d-flex justify-content-between">
-            <span>HowBig</span>
-            <span>
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg" alt="">
-            </span>
-          </di>
-        </li>
+      <ul id="comment-list" class="comment-list mb-3">
+        <!-- JS 輸出 -->
       </ul>
-      <ul class="page-viewer mb-12-4">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li class="is-active"></li>
+      <ul id="page-viewer" class="page-viewer">
+        <!-- JS 輸出 -->
       </ul>
     </div>
   </section>
   <section class="bg-mf">
-    <div class="footer-block">
+    <div class="footer-block  mt-12-4">
       <h2 class="mb-6">\ 美好用戶體驗，從對話開始 /</h2>
       <a href="project.html" class="btn btn-primary">方案費用</a>
     </div>
@@ -193,5 +140,7 @@
   <footer class="footer">
     <p>© 2022 chatTalker. All Rights Reserved.</p>
   </footer>
+  <script src="./js/all.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

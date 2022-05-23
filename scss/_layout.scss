@@ -152,6 +152,7 @@ nav {
     border-bottom: 1px solid #ddd;
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
+    min-height: 6rem;
   }
 
   h4 {
@@ -344,7 +345,7 @@ nav {
     position: relative;
     padding: 1rem 2rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.1s;
 
     &::before,
     &::after {
@@ -375,21 +376,21 @@ nav {
     &.is-open::before {
       display: none;
     }
+
+    &.is-open + .faq-a {
+      padding: 8px 32px 32px;
+      max-height: 100vh;
+    }
   }
 
   &-a {
     @include font(1rem , 400 , 2rem);
 
     overflow: hidden;
-    padding: 0 32px 0;
+    padding: 0 32px;
     max-height: 0;
     color: $reply-gray;
-    transition: 0.3s;
-
-    &.is-open {
-      max-height: 100vh;
-      padding: 8px 32px 32px;
-    }
+    transition: 0.1s;
   }
 
   li:not(:last-of-type) {

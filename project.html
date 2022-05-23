@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
-  <a href="#top" class="top flex-center">TOP</a>
-  <section id="top" class="bg-project">
+  <a href="#" id="top" class="top flex-center">TOP</a>
+  <section class="bg-project">
     <nav class="nav container">
       <h2 class="logo">
         <a href="index.html"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/logo.png" alt="chatTalker"></a>
@@ -25,12 +25,8 @@
   <section class="bg-lyh">
     <div class="container text-center">
       <h2>彈性選擇，提供您選擇最適合的方案</h2>
-      <ul class="project-list mt-6">
-        <li class="is-active">10000位</li>
-        <li>15000位</li>
-        <li>20000位</li>
-        <li>25000位</li>
-        <li>>25000位</li>
+      <ul id="project-list" class="project-list mt-6">
+        <!-- JS 輸出 -->
       </ul>
       <ul class="project-detail mt-6-6">
         <li>
@@ -40,12 +36,12 @@
             <div class="evaluate mb-4">
               <div class="evaluate-block">
                 <h4>訂閱用戶數</h4>
-                <p class="color-primary">10000<sub>位</sub></p>
+                <p id="b_user" class="color-primary">10000<sub>位</sub></p>
               </div>
               <p>=</p>
               <div class="evaluate-block">
                 <h4>試算每月的費用</h4>
-                <p>600<sub>TWD</sub></p>
+                <p id="b_price">600<sub>TWD</sub></p>
               </div>
             </div>
             <ul class="text-left mb-4">
@@ -64,12 +60,12 @@
             <div class="evaluate mb-4">
               <div class="evaluate-block">
                 <h4>訂閱用戶數</h4>
-                <p class="color-primary">10000<sub>位</sub></p>
+                <p id="s_user" class="color-primary">10000<sub>位</sub></p>
               </div>
               <p>=</p>
               <div class="evaluate-block">
                 <h4>試算每月的費用</h4>
-                <p>1600<sub>TWD</sub></p>
+                <p id="s_price" >1600<sub>TWD</sub></p>
               </div>
             </div>
             <ul class="text-left mb-4">
@@ -87,15 +83,15 @@
       <h2>常見問題</h2>
       <ul class="faq mt-6 text-left">
         <li>
-          <div class="faq-q" onclick="faqToggle(1)">我要怎麼變更方案？</div>
+          <div class="faq-q" id="q1" onclick="faqToggle(1)">我要怎麼變更方案？</div>
           <div class="faq-a" id="a1">請聯絡您的業務專員修改訂閱方案，我們將為您進行變更流程。</div>
         </li>
         <li>
-          <div class="faq-q" onclick="faqToggle(2)">如果我沒有LINE官方帳號怎麼辦？</div>
+          <div class="faq-q" id="q2" onclick="faqToggle(2)">如果我沒有LINE官方帳號怎麼辦？</div>
           <div class="faq-a" id="a2">沒關係的，只要您是我們任何一個方案的夥伴，我們的專員可以協助辦理哦！</div>
         </li>
         <li>
-          <div class="faq-q" onclick="faqToggle(3)">非上班日有客服支援嗎？</div>
+          <div class="faq-q" id="q3" onclick="faqToggle(3)">非上班日有客服支援嗎？</div>
           <div class="faq-a" id="a3">當然哦！我們錢都收了，不會拋棄你的<br>請您直接來我們公司，我們假日也都在辦公室。</div>
         </li>
       </ul>
@@ -105,5 +101,6 @@
     <p>© 2022 chatTalker. All Rights Reserved.</p>
   </footer>
   <script src="./js/all.js"></script>
+  <script src="./js/project.js"></script>
 </body>
 </html>
