@@ -138,6 +138,18 @@
         padding-top: ($distance * 0.5) + rem;
         padding-bottom: ($distance * 0.5) + rem;
       }
+
+      @for $min-distance from 1 through 7 {
+        .px-#{$size}-#{$distance}-#{$min-distance} {
+          padding-right: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+          padding-left: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+        }
+
+        .py-#{$size}-#{$distance}-#{$min-distance} {
+          padding-top: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+          padding-bottom: calc(0.5 * #{$distance}rem + #{$min-distance}px);
+        }
+      }
     }
   }
 }
@@ -202,7 +214,7 @@
   text-align: left;
 }
 
-.text-justify{
+.text-justify {
   text-align: justify;
 }
 

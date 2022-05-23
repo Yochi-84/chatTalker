@@ -171,10 +171,12 @@ strong {
   display: block;
 }
 
-small {
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.8125rem;
+@media screen and (max-width: 1128px) {
+  strong {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.875rem;
+  }
 }
 
 span {
@@ -198,6 +200,13 @@ label {
   max-width: 1088px;
 }
 
+@media screen and (max-width: 1128px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 .top {
   font-size: 1.125rem;
   font-family: "Wendy One", serif;
@@ -206,11 +215,19 @@ label {
   position: fixed;
   right: 3rem;
   bottom: 3rem;
+  z-index: 3;
   width: 71px;
   height: 71px;
   color: #fff;
   background-color: #56c4c5;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    right: 1rem;
+    bottom: 1rem;
+  }
 }
 
 .top:hover {
@@ -248,9 +265,29 @@ label {
   background-color: #56c4c5;
 }
 
+.service-description {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.8125rem;
+}
+
+@media screen and (max-width: 1128px) {
+  .service-description {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+  }
+}
+
 .footer {
-  text-align: center;
   margin-top: 100px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 60px;
+  }
 }
 
 .footer p {
@@ -263,27 +300,70 @@ label {
 
 .bg-main {
   padding-bottom: 117px;
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px calc(100% + 180px), url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home.svg) no-repeat calc(100% - 142px) 118px/532px 534px, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat 100% 0/850.36px 768px;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px calc(100% + 180px), url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat 100% 0/850.36px 768px;
+}
+
+@media screen and (max-width: 1128px) {
+  .bg-main {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px calc(100% + 180px), url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat top top/60vw 768px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bg-main {
+    padding-bottom: 92px;
+    background: none;
+  }
 }
 
 .bg-lgb {
   background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px -180px;
 }
 
+@media screen and (max-width: 768px) {
+  .bg-lgb {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -63px 10px/126px;
+  }
+}
+
 .bg-rgt {
   background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat calc(100% + 100px) calc(100% + 200px);
+}
+
+@media screen and (max-width: 768px) {
+  .bg-rgt {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat calc(100% + 47px) 100%/135px;
+  }
 }
 
 .bg-rgb {
   background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat calc(100% + 100px) -117px;
 }
 
+@media screen and (max-width: 768px) {
+  .bg-rgb {
+    background: none;
+  }
+}
+
 .bg-lyf {
   background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat 50px 140px;
 }
 
+@media screen and (max-width: 768px) {
+  .bg-lyf {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat -76px 40px/153px;
+  }
+}
+
 .bg-mf {
   background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg) no-repeat top/100%;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-mf {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg) no-repeat top center, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/talk01.svg) no-repeat calc(100% - 10px) 35%/60px, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/talk04.svg) no-repeat 10% 50%/60px;
+  }
 }
 
 .bg-project {
@@ -320,13 +400,35 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 24px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 2px #ffd153;
+            box-shadow: 0 2px 2px #ffd153;
+  }
 }
 
 nav .logo img {
-  min-width: 218.06px;
+  min-width: 218px;
   height: 40px;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  nav .logo img {
+    min-width: 131px;
+    height: 24px;
+  }
 }
 
 .card-list {
@@ -338,6 +440,30 @@ nav .logo img {
           justify-content: center;
   -webkit-column-gap: 126px;
           column-gap: 126px;
+}
+
+@media screen and (max-width: 1128px) {
+  .card-list {
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-list {
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-list {
+    -webkit-column-gap: 0;
+            column-gap: 0;
+    row-gap: 1.5rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .card-list img {
@@ -369,8 +495,23 @@ nav .logo img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 16px;
-          column-gap: 16px;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .role-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .role-list {
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
 }
 
 .role-list li {
@@ -380,6 +521,18 @@ nav .logo img {
   border-radius: 0.75rem;
   -webkit-box-shadow: 0 2px 10px #00000014;
           box-shadow: 0 2px 10px #00000014;
+}
+
+@media screen and (max-width: 768px) {
+  .role-list li {
+    width: calc((100% - 16px) / 2);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .role-list li {
+    width: 100%;
+  }
 }
 
 .role-list .text {
@@ -399,6 +552,95 @@ nav .logo img {
   line-height: 1.5rem;
 }
 
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .feature {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feature-text {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.feature-text p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+
+.feature-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 28px 23.5px;
+  max-width: 507px;
+}
+
+@media screen and (max-width: 768px) {
+  .feature-list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .feature-list {
+    gap: 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.feature li {
+  padding: 2rem 2rem 3rem;
+  width: calc(50% - 23.5px);
+  background-color: #fff;
+  border-radius: 0.75rem;
+  -webkit-box-shadow: 0 2px 10px #00000014;
+          box-shadow: 0 2px 10px #00000014;
+}
+
+@media screen and (max-width: 576px) {
+  .feature li {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+.feature .image {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 10px #00000014;
+          box-shadow: 0 2px 10px #00000014;
+}
+
 .comment-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,14 +653,37 @@ nav .logo img {
           column-gap: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+  .comment-list {
+    margin-top: 88px;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+}
+
 .comment-list li {
   position: relative;
   padding: 3rem 2rem 1.5rem;
   width: calc((100% - 2rem) / 3);
+  background-color: #fff;
   border-radius: 0.75rem;
   -webkit-box-shadow: 0 2px 10px #00000014;
           box-shadow: 0 2px 10px #00000014;
   text-align-last: left;
+}
+
+@media screen and (max-width: 768px) {
+  .comment-list li {
+    display: none;
+    width: calc((100% - 2rem) / 2);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .comment-list li {
+    display: block;
+    width: 100%;
+  }
 }
 
 .comment-list .user-image {
@@ -468,6 +733,18 @@ nav .logo img {
   margin-right: 8.22px;
 }
 
+@media screen and (max-width: 768px) {
+  .comment-list .show-on-pad {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .comment-list .show-on-pad {
+    display: none;
+  }
+}
+
 .page-viewer {
   font-size: 0;
   text-align: center;
@@ -493,57 +770,23 @@ nav .logo img {
   background-color: #ffd153;
 }
 
-.feature-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.feature-block p {
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.625rem;
-}
-
-.feature-block .feature-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 28px 23.5px;
-  max-width: 507px;
-}
-
-.feature-block li {
-  padding: 2rem 2rem 3rem;
-  width: calc(50% - 23.5px);
-  background-color: #fff;
-  border-radius: 0.75rem;
-  -webkit-box-shadow: 0 2px 10px #00000014;
-          box-shadow: 0 2px 10px #00000014;
-}
-
-.feature-block .image {
-  width: 86px;
-  height: 86px;
-  -webkit-box-shadow: 0 2px 10px #00000014;
-          box-shadow: 0 2px 10px #00000014;
-}
-
 .footer-block {
   padding: 260px 0  0;
   text-align: center;
+}
+
+.footer-block h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-block h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.1875rem;
+  }
 }
 
 .project-list {
@@ -736,14 +979,84 @@ nav .logo img {
   margin-bottom: 1rem;
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .main-text {
   padding: 158px 0 157px;
+}
+
+@media screen and (max-width: 1128px) {
+  .main-text {
+    margin-right: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-text {
+    padding: 104px 0 32px;
+  }
 }
 
 .main-text h1 {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.625rem;
+}
+
+@media screen and (max-width: 1128px) {
+  .main-text h1 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+}
+
+.main-text small {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.8125rem;
+}
+
+@media screen and (max-width: 1128px) {
+  .main-text small {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+}
+
+.main-img img {
+  width: 100%;
+  height: 534px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  .main-img img {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-img {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg) no-repeat 0/contain;
+  }
 }
 
 .project-text {
@@ -4462,7 +4775,7 @@ nav .logo img {
   padding-left: calc(0.5 * 12rem + 7px);
 }
 
-@media screen and (max-width: 1156px) {
+@media screen and (max-width: 1128px) {
   .mt-lg-0 {
     margin-top: 0;
   }
@@ -16375,7 +16688,7 @@ nav .logo img {
   padding-bottom: calc(0.5 * 12rem + 7px);
 }
 
-@media screen and (max-width: 1156px) {
+@media screen and (max-width: 1128px) {
   .px-lg-1 {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -16383,6 +16696,62 @@ nav .logo img {
   .py-lg-1 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+  .px-lg-1-1 {
+    padding-right: calc(0.5 * 1rem + 1px);
+    padding-left: calc(0.5 * 1rem + 1px);
+  }
+  .py-lg-1-1 {
+    padding-top: calc(0.5 * 1rem + 1px);
+    padding-bottom: calc(0.5 * 1rem + 1px);
+  }
+  .px-lg-1-2 {
+    padding-right: calc(0.5 * 1rem + 2px);
+    padding-left: calc(0.5 * 1rem + 2px);
+  }
+  .py-lg-1-2 {
+    padding-top: calc(0.5 * 1rem + 2px);
+    padding-bottom: calc(0.5 * 1rem + 2px);
+  }
+  .px-lg-1-3 {
+    padding-right: calc(0.5 * 1rem + 3px);
+    padding-left: calc(0.5 * 1rem + 3px);
+  }
+  .py-lg-1-3 {
+    padding-top: calc(0.5 * 1rem + 3px);
+    padding-bottom: calc(0.5 * 1rem + 3px);
+  }
+  .px-lg-1-4 {
+    padding-right: calc(0.5 * 1rem + 4px);
+    padding-left: calc(0.5 * 1rem + 4px);
+  }
+  .py-lg-1-4 {
+    padding-top: calc(0.5 * 1rem + 4px);
+    padding-bottom: calc(0.5 * 1rem + 4px);
+  }
+  .px-lg-1-5 {
+    padding-right: calc(0.5 * 1rem + 5px);
+    padding-left: calc(0.5 * 1rem + 5px);
+  }
+  .py-lg-1-5 {
+    padding-top: calc(0.5 * 1rem + 5px);
+    padding-bottom: calc(0.5 * 1rem + 5px);
+  }
+  .px-lg-1-6 {
+    padding-right: calc(0.5 * 1rem + 6px);
+    padding-left: calc(0.5 * 1rem + 6px);
+  }
+  .py-lg-1-6 {
+    padding-top: calc(0.5 * 1rem + 6px);
+    padding-bottom: calc(0.5 * 1rem + 6px);
+  }
+  .px-lg-1-7 {
+    padding-right: calc(0.5 * 1rem + 7px);
+    padding-left: calc(0.5 * 1rem + 7px);
+  }
+  .py-lg-1-7 {
+    padding-top: calc(0.5 * 1rem + 7px);
+    padding-bottom: calc(0.5 * 1rem + 7px);
   }
   .px-lg-2 {
     padding-right: 1rem;
@@ -16392,6 +16761,62 @@ nav .logo img {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+  .px-lg-2-1 {
+    padding-right: calc(0.5 * 2rem + 1px);
+    padding-left: calc(0.5 * 2rem + 1px);
+  }
+  .py-lg-2-1 {
+    padding-top: calc(0.5 * 2rem + 1px);
+    padding-bottom: calc(0.5 * 2rem + 1px);
+  }
+  .px-lg-2-2 {
+    padding-right: calc(0.5 * 2rem + 2px);
+    padding-left: calc(0.5 * 2rem + 2px);
+  }
+  .py-lg-2-2 {
+    padding-top: calc(0.5 * 2rem + 2px);
+    padding-bottom: calc(0.5 * 2rem + 2px);
+  }
+  .px-lg-2-3 {
+    padding-right: calc(0.5 * 2rem + 3px);
+    padding-left: calc(0.5 * 2rem + 3px);
+  }
+  .py-lg-2-3 {
+    padding-top: calc(0.5 * 2rem + 3px);
+    padding-bottom: calc(0.5 * 2rem + 3px);
+  }
+  .px-lg-2-4 {
+    padding-right: calc(0.5 * 2rem + 4px);
+    padding-left: calc(0.5 * 2rem + 4px);
+  }
+  .py-lg-2-4 {
+    padding-top: calc(0.5 * 2rem + 4px);
+    padding-bottom: calc(0.5 * 2rem + 4px);
+  }
+  .px-lg-2-5 {
+    padding-right: calc(0.5 * 2rem + 5px);
+    padding-left: calc(0.5 * 2rem + 5px);
+  }
+  .py-lg-2-5 {
+    padding-top: calc(0.5 * 2rem + 5px);
+    padding-bottom: calc(0.5 * 2rem + 5px);
+  }
+  .px-lg-2-6 {
+    padding-right: calc(0.5 * 2rem + 6px);
+    padding-left: calc(0.5 * 2rem + 6px);
+  }
+  .py-lg-2-6 {
+    padding-top: calc(0.5 * 2rem + 6px);
+    padding-bottom: calc(0.5 * 2rem + 6px);
+  }
+  .px-lg-2-7 {
+    padding-right: calc(0.5 * 2rem + 7px);
+    padding-left: calc(0.5 * 2rem + 7px);
+  }
+  .py-lg-2-7 {
+    padding-top: calc(0.5 * 2rem + 7px);
+    padding-bottom: calc(0.5 * 2rem + 7px);
+  }
   .px-lg-3 {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
@@ -16399,6 +16824,62 @@ nav .logo img {
   .py-lg-3 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+  .px-lg-3-1 {
+    padding-right: calc(0.5 * 3rem + 1px);
+    padding-left: calc(0.5 * 3rem + 1px);
+  }
+  .py-lg-3-1 {
+    padding-top: calc(0.5 * 3rem + 1px);
+    padding-bottom: calc(0.5 * 3rem + 1px);
+  }
+  .px-lg-3-2 {
+    padding-right: calc(0.5 * 3rem + 2px);
+    padding-left: calc(0.5 * 3rem + 2px);
+  }
+  .py-lg-3-2 {
+    padding-top: calc(0.5 * 3rem + 2px);
+    padding-bottom: calc(0.5 * 3rem + 2px);
+  }
+  .px-lg-3-3 {
+    padding-right: calc(0.5 * 3rem + 3px);
+    padding-left: calc(0.5 * 3rem + 3px);
+  }
+  .py-lg-3-3 {
+    padding-top: calc(0.5 * 3rem + 3px);
+    padding-bottom: calc(0.5 * 3rem + 3px);
+  }
+  .px-lg-3-4 {
+    padding-right: calc(0.5 * 3rem + 4px);
+    padding-left: calc(0.5 * 3rem + 4px);
+  }
+  .py-lg-3-4 {
+    padding-top: calc(0.5 * 3rem + 4px);
+    padding-bottom: calc(0.5 * 3rem + 4px);
+  }
+  .px-lg-3-5 {
+    padding-right: calc(0.5 * 3rem + 5px);
+    padding-left: calc(0.5 * 3rem + 5px);
+  }
+  .py-lg-3-5 {
+    padding-top: calc(0.5 * 3rem + 5px);
+    padding-bottom: calc(0.5 * 3rem + 5px);
+  }
+  .px-lg-3-6 {
+    padding-right: calc(0.5 * 3rem + 6px);
+    padding-left: calc(0.5 * 3rem + 6px);
+  }
+  .py-lg-3-6 {
+    padding-top: calc(0.5 * 3rem + 6px);
+    padding-bottom: calc(0.5 * 3rem + 6px);
+  }
+  .px-lg-3-7 {
+    padding-right: calc(0.5 * 3rem + 7px);
+    padding-left: calc(0.5 * 3rem + 7px);
+  }
+  .py-lg-3-7 {
+    padding-top: calc(0.5 * 3rem + 7px);
+    padding-bottom: calc(0.5 * 3rem + 7px);
   }
   .px-lg-4 {
     padding-right: 2rem;
@@ -16408,6 +16889,62 @@ nav .logo img {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+  .px-lg-4-1 {
+    padding-right: calc(0.5 * 4rem + 1px);
+    padding-left: calc(0.5 * 4rem + 1px);
+  }
+  .py-lg-4-1 {
+    padding-top: calc(0.5 * 4rem + 1px);
+    padding-bottom: calc(0.5 * 4rem + 1px);
+  }
+  .px-lg-4-2 {
+    padding-right: calc(0.5 * 4rem + 2px);
+    padding-left: calc(0.5 * 4rem + 2px);
+  }
+  .py-lg-4-2 {
+    padding-top: calc(0.5 * 4rem + 2px);
+    padding-bottom: calc(0.5 * 4rem + 2px);
+  }
+  .px-lg-4-3 {
+    padding-right: calc(0.5 * 4rem + 3px);
+    padding-left: calc(0.5 * 4rem + 3px);
+  }
+  .py-lg-4-3 {
+    padding-top: calc(0.5 * 4rem + 3px);
+    padding-bottom: calc(0.5 * 4rem + 3px);
+  }
+  .px-lg-4-4 {
+    padding-right: calc(0.5 * 4rem + 4px);
+    padding-left: calc(0.5 * 4rem + 4px);
+  }
+  .py-lg-4-4 {
+    padding-top: calc(0.5 * 4rem + 4px);
+    padding-bottom: calc(0.5 * 4rem + 4px);
+  }
+  .px-lg-4-5 {
+    padding-right: calc(0.5 * 4rem + 5px);
+    padding-left: calc(0.5 * 4rem + 5px);
+  }
+  .py-lg-4-5 {
+    padding-top: calc(0.5 * 4rem + 5px);
+    padding-bottom: calc(0.5 * 4rem + 5px);
+  }
+  .px-lg-4-6 {
+    padding-right: calc(0.5 * 4rem + 6px);
+    padding-left: calc(0.5 * 4rem + 6px);
+  }
+  .py-lg-4-6 {
+    padding-top: calc(0.5 * 4rem + 6px);
+    padding-bottom: calc(0.5 * 4rem + 6px);
+  }
+  .px-lg-4-7 {
+    padding-right: calc(0.5 * 4rem + 7px);
+    padding-left: calc(0.5 * 4rem + 7px);
+  }
+  .py-lg-4-7 {
+    padding-top: calc(0.5 * 4rem + 7px);
+    padding-bottom: calc(0.5 * 4rem + 7px);
+  }
   .px-lg-5 {
     padding-right: 2.5rem;
     padding-left: 2.5rem;
@@ -16415,6 +16952,62 @@ nav .logo img {
   .py-lg-5 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+  .px-lg-5-1 {
+    padding-right: calc(0.5 * 5rem + 1px);
+    padding-left: calc(0.5 * 5rem + 1px);
+  }
+  .py-lg-5-1 {
+    padding-top: calc(0.5 * 5rem + 1px);
+    padding-bottom: calc(0.5 * 5rem + 1px);
+  }
+  .px-lg-5-2 {
+    padding-right: calc(0.5 * 5rem + 2px);
+    padding-left: calc(0.5 * 5rem + 2px);
+  }
+  .py-lg-5-2 {
+    padding-top: calc(0.5 * 5rem + 2px);
+    padding-bottom: calc(0.5 * 5rem + 2px);
+  }
+  .px-lg-5-3 {
+    padding-right: calc(0.5 * 5rem + 3px);
+    padding-left: calc(0.5 * 5rem + 3px);
+  }
+  .py-lg-5-3 {
+    padding-top: calc(0.5 * 5rem + 3px);
+    padding-bottom: calc(0.5 * 5rem + 3px);
+  }
+  .px-lg-5-4 {
+    padding-right: calc(0.5 * 5rem + 4px);
+    padding-left: calc(0.5 * 5rem + 4px);
+  }
+  .py-lg-5-4 {
+    padding-top: calc(0.5 * 5rem + 4px);
+    padding-bottom: calc(0.5 * 5rem + 4px);
+  }
+  .px-lg-5-5 {
+    padding-right: calc(0.5 * 5rem + 5px);
+    padding-left: calc(0.5 * 5rem + 5px);
+  }
+  .py-lg-5-5 {
+    padding-top: calc(0.5 * 5rem + 5px);
+    padding-bottom: calc(0.5 * 5rem + 5px);
+  }
+  .px-lg-5-6 {
+    padding-right: calc(0.5 * 5rem + 6px);
+    padding-left: calc(0.5 * 5rem + 6px);
+  }
+  .py-lg-5-6 {
+    padding-top: calc(0.5 * 5rem + 6px);
+    padding-bottom: calc(0.5 * 5rem + 6px);
+  }
+  .px-lg-5-7 {
+    padding-right: calc(0.5 * 5rem + 7px);
+    padding-left: calc(0.5 * 5rem + 7px);
+  }
+  .py-lg-5-7 {
+    padding-top: calc(0.5 * 5rem + 7px);
+    padding-bottom: calc(0.5 * 5rem + 7px);
   }
   .px-lg-6 {
     padding-right: 3rem;
@@ -16424,6 +17017,62 @@ nav .logo img {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+  .px-lg-6-1 {
+    padding-right: calc(0.5 * 6rem + 1px);
+    padding-left: calc(0.5 * 6rem + 1px);
+  }
+  .py-lg-6-1 {
+    padding-top: calc(0.5 * 6rem + 1px);
+    padding-bottom: calc(0.5 * 6rem + 1px);
+  }
+  .px-lg-6-2 {
+    padding-right: calc(0.5 * 6rem + 2px);
+    padding-left: calc(0.5 * 6rem + 2px);
+  }
+  .py-lg-6-2 {
+    padding-top: calc(0.5 * 6rem + 2px);
+    padding-bottom: calc(0.5 * 6rem + 2px);
+  }
+  .px-lg-6-3 {
+    padding-right: calc(0.5 * 6rem + 3px);
+    padding-left: calc(0.5 * 6rem + 3px);
+  }
+  .py-lg-6-3 {
+    padding-top: calc(0.5 * 6rem + 3px);
+    padding-bottom: calc(0.5 * 6rem + 3px);
+  }
+  .px-lg-6-4 {
+    padding-right: calc(0.5 * 6rem + 4px);
+    padding-left: calc(0.5 * 6rem + 4px);
+  }
+  .py-lg-6-4 {
+    padding-top: calc(0.5 * 6rem + 4px);
+    padding-bottom: calc(0.5 * 6rem + 4px);
+  }
+  .px-lg-6-5 {
+    padding-right: calc(0.5 * 6rem + 5px);
+    padding-left: calc(0.5 * 6rem + 5px);
+  }
+  .py-lg-6-5 {
+    padding-top: calc(0.5 * 6rem + 5px);
+    padding-bottom: calc(0.5 * 6rem + 5px);
+  }
+  .px-lg-6-6 {
+    padding-right: calc(0.5 * 6rem + 6px);
+    padding-left: calc(0.5 * 6rem + 6px);
+  }
+  .py-lg-6-6 {
+    padding-top: calc(0.5 * 6rem + 6px);
+    padding-bottom: calc(0.5 * 6rem + 6px);
+  }
+  .px-lg-6-7 {
+    padding-right: calc(0.5 * 6rem + 7px);
+    padding-left: calc(0.5 * 6rem + 7px);
+  }
+  .py-lg-6-7 {
+    padding-top: calc(0.5 * 6rem + 7px);
+    padding-bottom: calc(0.5 * 6rem + 7px);
+  }
   .px-lg-7 {
     padding-right: 3.5rem;
     padding-left: 3.5rem;
@@ -16431,6 +17080,62 @@ nav .logo img {
   .py-lg-7 {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+  }
+  .px-lg-7-1 {
+    padding-right: calc(0.5 * 7rem + 1px);
+    padding-left: calc(0.5 * 7rem + 1px);
+  }
+  .py-lg-7-1 {
+    padding-top: calc(0.5 * 7rem + 1px);
+    padding-bottom: calc(0.5 * 7rem + 1px);
+  }
+  .px-lg-7-2 {
+    padding-right: calc(0.5 * 7rem + 2px);
+    padding-left: calc(0.5 * 7rem + 2px);
+  }
+  .py-lg-7-2 {
+    padding-top: calc(0.5 * 7rem + 2px);
+    padding-bottom: calc(0.5 * 7rem + 2px);
+  }
+  .px-lg-7-3 {
+    padding-right: calc(0.5 * 7rem + 3px);
+    padding-left: calc(0.5 * 7rem + 3px);
+  }
+  .py-lg-7-3 {
+    padding-top: calc(0.5 * 7rem + 3px);
+    padding-bottom: calc(0.5 * 7rem + 3px);
+  }
+  .px-lg-7-4 {
+    padding-right: calc(0.5 * 7rem + 4px);
+    padding-left: calc(0.5 * 7rem + 4px);
+  }
+  .py-lg-7-4 {
+    padding-top: calc(0.5 * 7rem + 4px);
+    padding-bottom: calc(0.5 * 7rem + 4px);
+  }
+  .px-lg-7-5 {
+    padding-right: calc(0.5 * 7rem + 5px);
+    padding-left: calc(0.5 * 7rem + 5px);
+  }
+  .py-lg-7-5 {
+    padding-top: calc(0.5 * 7rem + 5px);
+    padding-bottom: calc(0.5 * 7rem + 5px);
+  }
+  .px-lg-7-6 {
+    padding-right: calc(0.5 * 7rem + 6px);
+    padding-left: calc(0.5 * 7rem + 6px);
+  }
+  .py-lg-7-6 {
+    padding-top: calc(0.5 * 7rem + 6px);
+    padding-bottom: calc(0.5 * 7rem + 6px);
+  }
+  .px-lg-7-7 {
+    padding-right: calc(0.5 * 7rem + 7px);
+    padding-left: calc(0.5 * 7rem + 7px);
+  }
+  .py-lg-7-7 {
+    padding-top: calc(0.5 * 7rem + 7px);
+    padding-bottom: calc(0.5 * 7rem + 7px);
   }
   .px-lg-8 {
     padding-right: 4rem;
@@ -16440,6 +17145,62 @@ nav .logo img {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+  .px-lg-8-1 {
+    padding-right: calc(0.5 * 8rem + 1px);
+    padding-left: calc(0.5 * 8rem + 1px);
+  }
+  .py-lg-8-1 {
+    padding-top: calc(0.5 * 8rem + 1px);
+    padding-bottom: calc(0.5 * 8rem + 1px);
+  }
+  .px-lg-8-2 {
+    padding-right: calc(0.5 * 8rem + 2px);
+    padding-left: calc(0.5 * 8rem + 2px);
+  }
+  .py-lg-8-2 {
+    padding-top: calc(0.5 * 8rem + 2px);
+    padding-bottom: calc(0.5 * 8rem + 2px);
+  }
+  .px-lg-8-3 {
+    padding-right: calc(0.5 * 8rem + 3px);
+    padding-left: calc(0.5 * 8rem + 3px);
+  }
+  .py-lg-8-3 {
+    padding-top: calc(0.5 * 8rem + 3px);
+    padding-bottom: calc(0.5 * 8rem + 3px);
+  }
+  .px-lg-8-4 {
+    padding-right: calc(0.5 * 8rem + 4px);
+    padding-left: calc(0.5 * 8rem + 4px);
+  }
+  .py-lg-8-4 {
+    padding-top: calc(0.5 * 8rem + 4px);
+    padding-bottom: calc(0.5 * 8rem + 4px);
+  }
+  .px-lg-8-5 {
+    padding-right: calc(0.5 * 8rem + 5px);
+    padding-left: calc(0.5 * 8rem + 5px);
+  }
+  .py-lg-8-5 {
+    padding-top: calc(0.5 * 8rem + 5px);
+    padding-bottom: calc(0.5 * 8rem + 5px);
+  }
+  .px-lg-8-6 {
+    padding-right: calc(0.5 * 8rem + 6px);
+    padding-left: calc(0.5 * 8rem + 6px);
+  }
+  .py-lg-8-6 {
+    padding-top: calc(0.5 * 8rem + 6px);
+    padding-bottom: calc(0.5 * 8rem + 6px);
+  }
+  .px-lg-8-7 {
+    padding-right: calc(0.5 * 8rem + 7px);
+    padding-left: calc(0.5 * 8rem + 7px);
+  }
+  .py-lg-8-7 {
+    padding-top: calc(0.5 * 8rem + 7px);
+    padding-bottom: calc(0.5 * 8rem + 7px);
+  }
   .px-lg-9 {
     padding-right: 4.5rem;
     padding-left: 4.5rem;
@@ -16447,6 +17208,62 @@ nav .logo img {
   .py-lg-9 {
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
+  }
+  .px-lg-9-1 {
+    padding-right: calc(0.5 * 9rem + 1px);
+    padding-left: calc(0.5 * 9rem + 1px);
+  }
+  .py-lg-9-1 {
+    padding-top: calc(0.5 * 9rem + 1px);
+    padding-bottom: calc(0.5 * 9rem + 1px);
+  }
+  .px-lg-9-2 {
+    padding-right: calc(0.5 * 9rem + 2px);
+    padding-left: calc(0.5 * 9rem + 2px);
+  }
+  .py-lg-9-2 {
+    padding-top: calc(0.5 * 9rem + 2px);
+    padding-bottom: calc(0.5 * 9rem + 2px);
+  }
+  .px-lg-9-3 {
+    padding-right: calc(0.5 * 9rem + 3px);
+    padding-left: calc(0.5 * 9rem + 3px);
+  }
+  .py-lg-9-3 {
+    padding-top: calc(0.5 * 9rem + 3px);
+    padding-bottom: calc(0.5 * 9rem + 3px);
+  }
+  .px-lg-9-4 {
+    padding-right: calc(0.5 * 9rem + 4px);
+    padding-left: calc(0.5 * 9rem + 4px);
+  }
+  .py-lg-9-4 {
+    padding-top: calc(0.5 * 9rem + 4px);
+    padding-bottom: calc(0.5 * 9rem + 4px);
+  }
+  .px-lg-9-5 {
+    padding-right: calc(0.5 * 9rem + 5px);
+    padding-left: calc(0.5 * 9rem + 5px);
+  }
+  .py-lg-9-5 {
+    padding-top: calc(0.5 * 9rem + 5px);
+    padding-bottom: calc(0.5 * 9rem + 5px);
+  }
+  .px-lg-9-6 {
+    padding-right: calc(0.5 * 9rem + 6px);
+    padding-left: calc(0.5 * 9rem + 6px);
+  }
+  .py-lg-9-6 {
+    padding-top: calc(0.5 * 9rem + 6px);
+    padding-bottom: calc(0.5 * 9rem + 6px);
+  }
+  .px-lg-9-7 {
+    padding-right: calc(0.5 * 9rem + 7px);
+    padding-left: calc(0.5 * 9rem + 7px);
+  }
+  .py-lg-9-7 {
+    padding-top: calc(0.5 * 9rem + 7px);
+    padding-bottom: calc(0.5 * 9rem + 7px);
   }
   .px-lg-10 {
     padding-right: 5rem;
@@ -16456,6 +17273,62 @@ nav .logo img {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+  .px-lg-10-1 {
+    padding-right: calc(0.5 * 10rem + 1px);
+    padding-left: calc(0.5 * 10rem + 1px);
+  }
+  .py-lg-10-1 {
+    padding-top: calc(0.5 * 10rem + 1px);
+    padding-bottom: calc(0.5 * 10rem + 1px);
+  }
+  .px-lg-10-2 {
+    padding-right: calc(0.5 * 10rem + 2px);
+    padding-left: calc(0.5 * 10rem + 2px);
+  }
+  .py-lg-10-2 {
+    padding-top: calc(0.5 * 10rem + 2px);
+    padding-bottom: calc(0.5 * 10rem + 2px);
+  }
+  .px-lg-10-3 {
+    padding-right: calc(0.5 * 10rem + 3px);
+    padding-left: calc(0.5 * 10rem + 3px);
+  }
+  .py-lg-10-3 {
+    padding-top: calc(0.5 * 10rem + 3px);
+    padding-bottom: calc(0.5 * 10rem + 3px);
+  }
+  .px-lg-10-4 {
+    padding-right: calc(0.5 * 10rem + 4px);
+    padding-left: calc(0.5 * 10rem + 4px);
+  }
+  .py-lg-10-4 {
+    padding-top: calc(0.5 * 10rem + 4px);
+    padding-bottom: calc(0.5 * 10rem + 4px);
+  }
+  .px-lg-10-5 {
+    padding-right: calc(0.5 * 10rem + 5px);
+    padding-left: calc(0.5 * 10rem + 5px);
+  }
+  .py-lg-10-5 {
+    padding-top: calc(0.5 * 10rem + 5px);
+    padding-bottom: calc(0.5 * 10rem + 5px);
+  }
+  .px-lg-10-6 {
+    padding-right: calc(0.5 * 10rem + 6px);
+    padding-left: calc(0.5 * 10rem + 6px);
+  }
+  .py-lg-10-6 {
+    padding-top: calc(0.5 * 10rem + 6px);
+    padding-bottom: calc(0.5 * 10rem + 6px);
+  }
+  .px-lg-10-7 {
+    padding-right: calc(0.5 * 10rem + 7px);
+    padding-left: calc(0.5 * 10rem + 7px);
+  }
+  .py-lg-10-7 {
+    padding-top: calc(0.5 * 10rem + 7px);
+    padding-bottom: calc(0.5 * 10rem + 7px);
+  }
   .px-lg-11 {
     padding-right: 5.5rem;
     padding-left: 5.5rem;
@@ -16464,6 +17337,62 @@ nav .logo img {
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
   }
+  .px-lg-11-1 {
+    padding-right: calc(0.5 * 11rem + 1px);
+    padding-left: calc(0.5 * 11rem + 1px);
+  }
+  .py-lg-11-1 {
+    padding-top: calc(0.5 * 11rem + 1px);
+    padding-bottom: calc(0.5 * 11rem + 1px);
+  }
+  .px-lg-11-2 {
+    padding-right: calc(0.5 * 11rem + 2px);
+    padding-left: calc(0.5 * 11rem + 2px);
+  }
+  .py-lg-11-2 {
+    padding-top: calc(0.5 * 11rem + 2px);
+    padding-bottom: calc(0.5 * 11rem + 2px);
+  }
+  .px-lg-11-3 {
+    padding-right: calc(0.5 * 11rem + 3px);
+    padding-left: calc(0.5 * 11rem + 3px);
+  }
+  .py-lg-11-3 {
+    padding-top: calc(0.5 * 11rem + 3px);
+    padding-bottom: calc(0.5 * 11rem + 3px);
+  }
+  .px-lg-11-4 {
+    padding-right: calc(0.5 * 11rem + 4px);
+    padding-left: calc(0.5 * 11rem + 4px);
+  }
+  .py-lg-11-4 {
+    padding-top: calc(0.5 * 11rem + 4px);
+    padding-bottom: calc(0.5 * 11rem + 4px);
+  }
+  .px-lg-11-5 {
+    padding-right: calc(0.5 * 11rem + 5px);
+    padding-left: calc(0.5 * 11rem + 5px);
+  }
+  .py-lg-11-5 {
+    padding-top: calc(0.5 * 11rem + 5px);
+    padding-bottom: calc(0.5 * 11rem + 5px);
+  }
+  .px-lg-11-6 {
+    padding-right: calc(0.5 * 11rem + 6px);
+    padding-left: calc(0.5 * 11rem + 6px);
+  }
+  .py-lg-11-6 {
+    padding-top: calc(0.5 * 11rem + 6px);
+    padding-bottom: calc(0.5 * 11rem + 6px);
+  }
+  .px-lg-11-7 {
+    padding-right: calc(0.5 * 11rem + 7px);
+    padding-left: calc(0.5 * 11rem + 7px);
+  }
+  .py-lg-11-7 {
+    padding-top: calc(0.5 * 11rem + 7px);
+    padding-bottom: calc(0.5 * 11rem + 7px);
+  }
   .px-lg-12 {
     padding-right: 6rem;
     padding-left: 6rem;
@@ -16471,6 +17400,62 @@ nav .logo img {
   .py-lg-12 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+  .px-lg-12-1 {
+    padding-right: calc(0.5 * 12rem + 1px);
+    padding-left: calc(0.5 * 12rem + 1px);
+  }
+  .py-lg-12-1 {
+    padding-top: calc(0.5 * 12rem + 1px);
+    padding-bottom: calc(0.5 * 12rem + 1px);
+  }
+  .px-lg-12-2 {
+    padding-right: calc(0.5 * 12rem + 2px);
+    padding-left: calc(0.5 * 12rem + 2px);
+  }
+  .py-lg-12-2 {
+    padding-top: calc(0.5 * 12rem + 2px);
+    padding-bottom: calc(0.5 * 12rem + 2px);
+  }
+  .px-lg-12-3 {
+    padding-right: calc(0.5 * 12rem + 3px);
+    padding-left: calc(0.5 * 12rem + 3px);
+  }
+  .py-lg-12-3 {
+    padding-top: calc(0.5 * 12rem + 3px);
+    padding-bottom: calc(0.5 * 12rem + 3px);
+  }
+  .px-lg-12-4 {
+    padding-right: calc(0.5 * 12rem + 4px);
+    padding-left: calc(0.5 * 12rem + 4px);
+  }
+  .py-lg-12-4 {
+    padding-top: calc(0.5 * 12rem + 4px);
+    padding-bottom: calc(0.5 * 12rem + 4px);
+  }
+  .px-lg-12-5 {
+    padding-right: calc(0.5 * 12rem + 5px);
+    padding-left: calc(0.5 * 12rem + 5px);
+  }
+  .py-lg-12-5 {
+    padding-top: calc(0.5 * 12rem + 5px);
+    padding-bottom: calc(0.5 * 12rem + 5px);
+  }
+  .px-lg-12-6 {
+    padding-right: calc(0.5 * 12rem + 6px);
+    padding-left: calc(0.5 * 12rem + 6px);
+  }
+  .py-lg-12-6 {
+    padding-top: calc(0.5 * 12rem + 6px);
+    padding-bottom: calc(0.5 * 12rem + 6px);
+  }
+  .px-lg-12-7 {
+    padding-right: calc(0.5 * 12rem + 7px);
+    padding-left: calc(0.5 * 12rem + 7px);
+  }
+  .py-lg-12-7 {
+    padding-top: calc(0.5 * 12rem + 7px);
+    padding-bottom: calc(0.5 * 12rem + 7px);
   }
 }
 
@@ -16483,6 +17468,62 @@ nav .logo img {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+  .px-md-1-1 {
+    padding-right: calc(0.5 * 1rem + 1px);
+    padding-left: calc(0.5 * 1rem + 1px);
+  }
+  .py-md-1-1 {
+    padding-top: calc(0.5 * 1rem + 1px);
+    padding-bottom: calc(0.5 * 1rem + 1px);
+  }
+  .px-md-1-2 {
+    padding-right: calc(0.5 * 1rem + 2px);
+    padding-left: calc(0.5 * 1rem + 2px);
+  }
+  .py-md-1-2 {
+    padding-top: calc(0.5 * 1rem + 2px);
+    padding-bottom: calc(0.5 * 1rem + 2px);
+  }
+  .px-md-1-3 {
+    padding-right: calc(0.5 * 1rem + 3px);
+    padding-left: calc(0.5 * 1rem + 3px);
+  }
+  .py-md-1-3 {
+    padding-top: calc(0.5 * 1rem + 3px);
+    padding-bottom: calc(0.5 * 1rem + 3px);
+  }
+  .px-md-1-4 {
+    padding-right: calc(0.5 * 1rem + 4px);
+    padding-left: calc(0.5 * 1rem + 4px);
+  }
+  .py-md-1-4 {
+    padding-top: calc(0.5 * 1rem + 4px);
+    padding-bottom: calc(0.5 * 1rem + 4px);
+  }
+  .px-md-1-5 {
+    padding-right: calc(0.5 * 1rem + 5px);
+    padding-left: calc(0.5 * 1rem + 5px);
+  }
+  .py-md-1-5 {
+    padding-top: calc(0.5 * 1rem + 5px);
+    padding-bottom: calc(0.5 * 1rem + 5px);
+  }
+  .px-md-1-6 {
+    padding-right: calc(0.5 * 1rem + 6px);
+    padding-left: calc(0.5 * 1rem + 6px);
+  }
+  .py-md-1-6 {
+    padding-top: calc(0.5 * 1rem + 6px);
+    padding-bottom: calc(0.5 * 1rem + 6px);
+  }
+  .px-md-1-7 {
+    padding-right: calc(0.5 * 1rem + 7px);
+    padding-left: calc(0.5 * 1rem + 7px);
+  }
+  .py-md-1-7 {
+    padding-top: calc(0.5 * 1rem + 7px);
+    padding-bottom: calc(0.5 * 1rem + 7px);
+  }
   .px-md-2 {
     padding-right: 1rem;
     padding-left: 1rem;
@@ -16490,6 +17531,62 @@ nav .logo img {
   .py-md-2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+  .px-md-2-1 {
+    padding-right: calc(0.5 * 2rem + 1px);
+    padding-left: calc(0.5 * 2rem + 1px);
+  }
+  .py-md-2-1 {
+    padding-top: calc(0.5 * 2rem + 1px);
+    padding-bottom: calc(0.5 * 2rem + 1px);
+  }
+  .px-md-2-2 {
+    padding-right: calc(0.5 * 2rem + 2px);
+    padding-left: calc(0.5 * 2rem + 2px);
+  }
+  .py-md-2-2 {
+    padding-top: calc(0.5 * 2rem + 2px);
+    padding-bottom: calc(0.5 * 2rem + 2px);
+  }
+  .px-md-2-3 {
+    padding-right: calc(0.5 * 2rem + 3px);
+    padding-left: calc(0.5 * 2rem + 3px);
+  }
+  .py-md-2-3 {
+    padding-top: calc(0.5 * 2rem + 3px);
+    padding-bottom: calc(0.5 * 2rem + 3px);
+  }
+  .px-md-2-4 {
+    padding-right: calc(0.5 * 2rem + 4px);
+    padding-left: calc(0.5 * 2rem + 4px);
+  }
+  .py-md-2-4 {
+    padding-top: calc(0.5 * 2rem + 4px);
+    padding-bottom: calc(0.5 * 2rem + 4px);
+  }
+  .px-md-2-5 {
+    padding-right: calc(0.5 * 2rem + 5px);
+    padding-left: calc(0.5 * 2rem + 5px);
+  }
+  .py-md-2-5 {
+    padding-top: calc(0.5 * 2rem + 5px);
+    padding-bottom: calc(0.5 * 2rem + 5px);
+  }
+  .px-md-2-6 {
+    padding-right: calc(0.5 * 2rem + 6px);
+    padding-left: calc(0.5 * 2rem + 6px);
+  }
+  .py-md-2-6 {
+    padding-top: calc(0.5 * 2rem + 6px);
+    padding-bottom: calc(0.5 * 2rem + 6px);
+  }
+  .px-md-2-7 {
+    padding-right: calc(0.5 * 2rem + 7px);
+    padding-left: calc(0.5 * 2rem + 7px);
+  }
+  .py-md-2-7 {
+    padding-top: calc(0.5 * 2rem + 7px);
+    padding-bottom: calc(0.5 * 2rem + 7px);
   }
   .px-md-3 {
     padding-right: 1.5rem;
@@ -16499,6 +17596,62 @@ nav .logo img {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+  .px-md-3-1 {
+    padding-right: calc(0.5 * 3rem + 1px);
+    padding-left: calc(0.5 * 3rem + 1px);
+  }
+  .py-md-3-1 {
+    padding-top: calc(0.5 * 3rem + 1px);
+    padding-bottom: calc(0.5 * 3rem + 1px);
+  }
+  .px-md-3-2 {
+    padding-right: calc(0.5 * 3rem + 2px);
+    padding-left: calc(0.5 * 3rem + 2px);
+  }
+  .py-md-3-2 {
+    padding-top: calc(0.5 * 3rem + 2px);
+    padding-bottom: calc(0.5 * 3rem + 2px);
+  }
+  .px-md-3-3 {
+    padding-right: calc(0.5 * 3rem + 3px);
+    padding-left: calc(0.5 * 3rem + 3px);
+  }
+  .py-md-3-3 {
+    padding-top: calc(0.5 * 3rem + 3px);
+    padding-bottom: calc(0.5 * 3rem + 3px);
+  }
+  .px-md-3-4 {
+    padding-right: calc(0.5 * 3rem + 4px);
+    padding-left: calc(0.5 * 3rem + 4px);
+  }
+  .py-md-3-4 {
+    padding-top: calc(0.5 * 3rem + 4px);
+    padding-bottom: calc(0.5 * 3rem + 4px);
+  }
+  .px-md-3-5 {
+    padding-right: calc(0.5 * 3rem + 5px);
+    padding-left: calc(0.5 * 3rem + 5px);
+  }
+  .py-md-3-5 {
+    padding-top: calc(0.5 * 3rem + 5px);
+    padding-bottom: calc(0.5 * 3rem + 5px);
+  }
+  .px-md-3-6 {
+    padding-right: calc(0.5 * 3rem + 6px);
+    padding-left: calc(0.5 * 3rem + 6px);
+  }
+  .py-md-3-6 {
+    padding-top: calc(0.5 * 3rem + 6px);
+    padding-bottom: calc(0.5 * 3rem + 6px);
+  }
+  .px-md-3-7 {
+    padding-right: calc(0.5 * 3rem + 7px);
+    padding-left: calc(0.5 * 3rem + 7px);
+  }
+  .py-md-3-7 {
+    padding-top: calc(0.5 * 3rem + 7px);
+    padding-bottom: calc(0.5 * 3rem + 7px);
+  }
   .px-md-4 {
     padding-right: 2rem;
     padding-left: 2rem;
@@ -16506,6 +17659,62 @@ nav .logo img {
   .py-md-4 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .px-md-4-1 {
+    padding-right: calc(0.5 * 4rem + 1px);
+    padding-left: calc(0.5 * 4rem + 1px);
+  }
+  .py-md-4-1 {
+    padding-top: calc(0.5 * 4rem + 1px);
+    padding-bottom: calc(0.5 * 4rem + 1px);
+  }
+  .px-md-4-2 {
+    padding-right: calc(0.5 * 4rem + 2px);
+    padding-left: calc(0.5 * 4rem + 2px);
+  }
+  .py-md-4-2 {
+    padding-top: calc(0.5 * 4rem + 2px);
+    padding-bottom: calc(0.5 * 4rem + 2px);
+  }
+  .px-md-4-3 {
+    padding-right: calc(0.5 * 4rem + 3px);
+    padding-left: calc(0.5 * 4rem + 3px);
+  }
+  .py-md-4-3 {
+    padding-top: calc(0.5 * 4rem + 3px);
+    padding-bottom: calc(0.5 * 4rem + 3px);
+  }
+  .px-md-4-4 {
+    padding-right: calc(0.5 * 4rem + 4px);
+    padding-left: calc(0.5 * 4rem + 4px);
+  }
+  .py-md-4-4 {
+    padding-top: calc(0.5 * 4rem + 4px);
+    padding-bottom: calc(0.5 * 4rem + 4px);
+  }
+  .px-md-4-5 {
+    padding-right: calc(0.5 * 4rem + 5px);
+    padding-left: calc(0.5 * 4rem + 5px);
+  }
+  .py-md-4-5 {
+    padding-top: calc(0.5 * 4rem + 5px);
+    padding-bottom: calc(0.5 * 4rem + 5px);
+  }
+  .px-md-4-6 {
+    padding-right: calc(0.5 * 4rem + 6px);
+    padding-left: calc(0.5 * 4rem + 6px);
+  }
+  .py-md-4-6 {
+    padding-top: calc(0.5 * 4rem + 6px);
+    padding-bottom: calc(0.5 * 4rem + 6px);
+  }
+  .px-md-4-7 {
+    padding-right: calc(0.5 * 4rem + 7px);
+    padding-left: calc(0.5 * 4rem + 7px);
+  }
+  .py-md-4-7 {
+    padding-top: calc(0.5 * 4rem + 7px);
+    padding-bottom: calc(0.5 * 4rem + 7px);
   }
   .px-md-5 {
     padding-right: 2.5rem;
@@ -16515,6 +17724,62 @@ nav .logo img {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+  .px-md-5-1 {
+    padding-right: calc(0.5 * 5rem + 1px);
+    padding-left: calc(0.5 * 5rem + 1px);
+  }
+  .py-md-5-1 {
+    padding-top: calc(0.5 * 5rem + 1px);
+    padding-bottom: calc(0.5 * 5rem + 1px);
+  }
+  .px-md-5-2 {
+    padding-right: calc(0.5 * 5rem + 2px);
+    padding-left: calc(0.5 * 5rem + 2px);
+  }
+  .py-md-5-2 {
+    padding-top: calc(0.5 * 5rem + 2px);
+    padding-bottom: calc(0.5 * 5rem + 2px);
+  }
+  .px-md-5-3 {
+    padding-right: calc(0.5 * 5rem + 3px);
+    padding-left: calc(0.5 * 5rem + 3px);
+  }
+  .py-md-5-3 {
+    padding-top: calc(0.5 * 5rem + 3px);
+    padding-bottom: calc(0.5 * 5rem + 3px);
+  }
+  .px-md-5-4 {
+    padding-right: calc(0.5 * 5rem + 4px);
+    padding-left: calc(0.5 * 5rem + 4px);
+  }
+  .py-md-5-4 {
+    padding-top: calc(0.5 * 5rem + 4px);
+    padding-bottom: calc(0.5 * 5rem + 4px);
+  }
+  .px-md-5-5 {
+    padding-right: calc(0.5 * 5rem + 5px);
+    padding-left: calc(0.5 * 5rem + 5px);
+  }
+  .py-md-5-5 {
+    padding-top: calc(0.5 * 5rem + 5px);
+    padding-bottom: calc(0.5 * 5rem + 5px);
+  }
+  .px-md-5-6 {
+    padding-right: calc(0.5 * 5rem + 6px);
+    padding-left: calc(0.5 * 5rem + 6px);
+  }
+  .py-md-5-6 {
+    padding-top: calc(0.5 * 5rem + 6px);
+    padding-bottom: calc(0.5 * 5rem + 6px);
+  }
+  .px-md-5-7 {
+    padding-right: calc(0.5 * 5rem + 7px);
+    padding-left: calc(0.5 * 5rem + 7px);
+  }
+  .py-md-5-7 {
+    padding-top: calc(0.5 * 5rem + 7px);
+    padding-bottom: calc(0.5 * 5rem + 7px);
+  }
   .px-md-6 {
     padding-right: 3rem;
     padding-left: 3rem;
@@ -16522,6 +17787,62 @@ nav .logo img {
   .py-md-6 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+  .px-md-6-1 {
+    padding-right: calc(0.5 * 6rem + 1px);
+    padding-left: calc(0.5 * 6rem + 1px);
+  }
+  .py-md-6-1 {
+    padding-top: calc(0.5 * 6rem + 1px);
+    padding-bottom: calc(0.5 * 6rem + 1px);
+  }
+  .px-md-6-2 {
+    padding-right: calc(0.5 * 6rem + 2px);
+    padding-left: calc(0.5 * 6rem + 2px);
+  }
+  .py-md-6-2 {
+    padding-top: calc(0.5 * 6rem + 2px);
+    padding-bottom: calc(0.5 * 6rem + 2px);
+  }
+  .px-md-6-3 {
+    padding-right: calc(0.5 * 6rem + 3px);
+    padding-left: calc(0.5 * 6rem + 3px);
+  }
+  .py-md-6-3 {
+    padding-top: calc(0.5 * 6rem + 3px);
+    padding-bottom: calc(0.5 * 6rem + 3px);
+  }
+  .px-md-6-4 {
+    padding-right: calc(0.5 * 6rem + 4px);
+    padding-left: calc(0.5 * 6rem + 4px);
+  }
+  .py-md-6-4 {
+    padding-top: calc(0.5 * 6rem + 4px);
+    padding-bottom: calc(0.5 * 6rem + 4px);
+  }
+  .px-md-6-5 {
+    padding-right: calc(0.5 * 6rem + 5px);
+    padding-left: calc(0.5 * 6rem + 5px);
+  }
+  .py-md-6-5 {
+    padding-top: calc(0.5 * 6rem + 5px);
+    padding-bottom: calc(0.5 * 6rem + 5px);
+  }
+  .px-md-6-6 {
+    padding-right: calc(0.5 * 6rem + 6px);
+    padding-left: calc(0.5 * 6rem + 6px);
+  }
+  .py-md-6-6 {
+    padding-top: calc(0.5 * 6rem + 6px);
+    padding-bottom: calc(0.5 * 6rem + 6px);
+  }
+  .px-md-6-7 {
+    padding-right: calc(0.5 * 6rem + 7px);
+    padding-left: calc(0.5 * 6rem + 7px);
+  }
+  .py-md-6-7 {
+    padding-top: calc(0.5 * 6rem + 7px);
+    padding-bottom: calc(0.5 * 6rem + 7px);
   }
   .px-md-7 {
     padding-right: 3.5rem;
@@ -16531,6 +17852,62 @@ nav .logo img {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
   }
+  .px-md-7-1 {
+    padding-right: calc(0.5 * 7rem + 1px);
+    padding-left: calc(0.5 * 7rem + 1px);
+  }
+  .py-md-7-1 {
+    padding-top: calc(0.5 * 7rem + 1px);
+    padding-bottom: calc(0.5 * 7rem + 1px);
+  }
+  .px-md-7-2 {
+    padding-right: calc(0.5 * 7rem + 2px);
+    padding-left: calc(0.5 * 7rem + 2px);
+  }
+  .py-md-7-2 {
+    padding-top: calc(0.5 * 7rem + 2px);
+    padding-bottom: calc(0.5 * 7rem + 2px);
+  }
+  .px-md-7-3 {
+    padding-right: calc(0.5 * 7rem + 3px);
+    padding-left: calc(0.5 * 7rem + 3px);
+  }
+  .py-md-7-3 {
+    padding-top: calc(0.5 * 7rem + 3px);
+    padding-bottom: calc(0.5 * 7rem + 3px);
+  }
+  .px-md-7-4 {
+    padding-right: calc(0.5 * 7rem + 4px);
+    padding-left: calc(0.5 * 7rem + 4px);
+  }
+  .py-md-7-4 {
+    padding-top: calc(0.5 * 7rem + 4px);
+    padding-bottom: calc(0.5 * 7rem + 4px);
+  }
+  .px-md-7-5 {
+    padding-right: calc(0.5 * 7rem + 5px);
+    padding-left: calc(0.5 * 7rem + 5px);
+  }
+  .py-md-7-5 {
+    padding-top: calc(0.5 * 7rem + 5px);
+    padding-bottom: calc(0.5 * 7rem + 5px);
+  }
+  .px-md-7-6 {
+    padding-right: calc(0.5 * 7rem + 6px);
+    padding-left: calc(0.5 * 7rem + 6px);
+  }
+  .py-md-7-6 {
+    padding-top: calc(0.5 * 7rem + 6px);
+    padding-bottom: calc(0.5 * 7rem + 6px);
+  }
+  .px-md-7-7 {
+    padding-right: calc(0.5 * 7rem + 7px);
+    padding-left: calc(0.5 * 7rem + 7px);
+  }
+  .py-md-7-7 {
+    padding-top: calc(0.5 * 7rem + 7px);
+    padding-bottom: calc(0.5 * 7rem + 7px);
+  }
   .px-md-8 {
     padding-right: 4rem;
     padding-left: 4rem;
@@ -16538,6 +17915,62 @@ nav .logo img {
   .py-md-8 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+  .px-md-8-1 {
+    padding-right: calc(0.5 * 8rem + 1px);
+    padding-left: calc(0.5 * 8rem + 1px);
+  }
+  .py-md-8-1 {
+    padding-top: calc(0.5 * 8rem + 1px);
+    padding-bottom: calc(0.5 * 8rem + 1px);
+  }
+  .px-md-8-2 {
+    padding-right: calc(0.5 * 8rem + 2px);
+    padding-left: calc(0.5 * 8rem + 2px);
+  }
+  .py-md-8-2 {
+    padding-top: calc(0.5 * 8rem + 2px);
+    padding-bottom: calc(0.5 * 8rem + 2px);
+  }
+  .px-md-8-3 {
+    padding-right: calc(0.5 * 8rem + 3px);
+    padding-left: calc(0.5 * 8rem + 3px);
+  }
+  .py-md-8-3 {
+    padding-top: calc(0.5 * 8rem + 3px);
+    padding-bottom: calc(0.5 * 8rem + 3px);
+  }
+  .px-md-8-4 {
+    padding-right: calc(0.5 * 8rem + 4px);
+    padding-left: calc(0.5 * 8rem + 4px);
+  }
+  .py-md-8-4 {
+    padding-top: calc(0.5 * 8rem + 4px);
+    padding-bottom: calc(0.5 * 8rem + 4px);
+  }
+  .px-md-8-5 {
+    padding-right: calc(0.5 * 8rem + 5px);
+    padding-left: calc(0.5 * 8rem + 5px);
+  }
+  .py-md-8-5 {
+    padding-top: calc(0.5 * 8rem + 5px);
+    padding-bottom: calc(0.5 * 8rem + 5px);
+  }
+  .px-md-8-6 {
+    padding-right: calc(0.5 * 8rem + 6px);
+    padding-left: calc(0.5 * 8rem + 6px);
+  }
+  .py-md-8-6 {
+    padding-top: calc(0.5 * 8rem + 6px);
+    padding-bottom: calc(0.5 * 8rem + 6px);
+  }
+  .px-md-8-7 {
+    padding-right: calc(0.5 * 8rem + 7px);
+    padding-left: calc(0.5 * 8rem + 7px);
+  }
+  .py-md-8-7 {
+    padding-top: calc(0.5 * 8rem + 7px);
+    padding-bottom: calc(0.5 * 8rem + 7px);
   }
   .px-md-9 {
     padding-right: 4.5rem;
@@ -16547,6 +17980,62 @@ nav .logo img {
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
   }
+  .px-md-9-1 {
+    padding-right: calc(0.5 * 9rem + 1px);
+    padding-left: calc(0.5 * 9rem + 1px);
+  }
+  .py-md-9-1 {
+    padding-top: calc(0.5 * 9rem + 1px);
+    padding-bottom: calc(0.5 * 9rem + 1px);
+  }
+  .px-md-9-2 {
+    padding-right: calc(0.5 * 9rem + 2px);
+    padding-left: calc(0.5 * 9rem + 2px);
+  }
+  .py-md-9-2 {
+    padding-top: calc(0.5 * 9rem + 2px);
+    padding-bottom: calc(0.5 * 9rem + 2px);
+  }
+  .px-md-9-3 {
+    padding-right: calc(0.5 * 9rem + 3px);
+    padding-left: calc(0.5 * 9rem + 3px);
+  }
+  .py-md-9-3 {
+    padding-top: calc(0.5 * 9rem + 3px);
+    padding-bottom: calc(0.5 * 9rem + 3px);
+  }
+  .px-md-9-4 {
+    padding-right: calc(0.5 * 9rem + 4px);
+    padding-left: calc(0.5 * 9rem + 4px);
+  }
+  .py-md-9-4 {
+    padding-top: calc(0.5 * 9rem + 4px);
+    padding-bottom: calc(0.5 * 9rem + 4px);
+  }
+  .px-md-9-5 {
+    padding-right: calc(0.5 * 9rem + 5px);
+    padding-left: calc(0.5 * 9rem + 5px);
+  }
+  .py-md-9-5 {
+    padding-top: calc(0.5 * 9rem + 5px);
+    padding-bottom: calc(0.5 * 9rem + 5px);
+  }
+  .px-md-9-6 {
+    padding-right: calc(0.5 * 9rem + 6px);
+    padding-left: calc(0.5 * 9rem + 6px);
+  }
+  .py-md-9-6 {
+    padding-top: calc(0.5 * 9rem + 6px);
+    padding-bottom: calc(0.5 * 9rem + 6px);
+  }
+  .px-md-9-7 {
+    padding-right: calc(0.5 * 9rem + 7px);
+    padding-left: calc(0.5 * 9rem + 7px);
+  }
+  .py-md-9-7 {
+    padding-top: calc(0.5 * 9rem + 7px);
+    padding-bottom: calc(0.5 * 9rem + 7px);
+  }
   .px-md-10 {
     padding-right: 5rem;
     padding-left: 5rem;
@@ -16554,6 +18043,62 @@ nav .logo img {
   .py-md-10 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+  .px-md-10-1 {
+    padding-right: calc(0.5 * 10rem + 1px);
+    padding-left: calc(0.5 * 10rem + 1px);
+  }
+  .py-md-10-1 {
+    padding-top: calc(0.5 * 10rem + 1px);
+    padding-bottom: calc(0.5 * 10rem + 1px);
+  }
+  .px-md-10-2 {
+    padding-right: calc(0.5 * 10rem + 2px);
+    padding-left: calc(0.5 * 10rem + 2px);
+  }
+  .py-md-10-2 {
+    padding-top: calc(0.5 * 10rem + 2px);
+    padding-bottom: calc(0.5 * 10rem + 2px);
+  }
+  .px-md-10-3 {
+    padding-right: calc(0.5 * 10rem + 3px);
+    padding-left: calc(0.5 * 10rem + 3px);
+  }
+  .py-md-10-3 {
+    padding-top: calc(0.5 * 10rem + 3px);
+    padding-bottom: calc(0.5 * 10rem + 3px);
+  }
+  .px-md-10-4 {
+    padding-right: calc(0.5 * 10rem + 4px);
+    padding-left: calc(0.5 * 10rem + 4px);
+  }
+  .py-md-10-4 {
+    padding-top: calc(0.5 * 10rem + 4px);
+    padding-bottom: calc(0.5 * 10rem + 4px);
+  }
+  .px-md-10-5 {
+    padding-right: calc(0.5 * 10rem + 5px);
+    padding-left: calc(0.5 * 10rem + 5px);
+  }
+  .py-md-10-5 {
+    padding-top: calc(0.5 * 10rem + 5px);
+    padding-bottom: calc(0.5 * 10rem + 5px);
+  }
+  .px-md-10-6 {
+    padding-right: calc(0.5 * 10rem + 6px);
+    padding-left: calc(0.5 * 10rem + 6px);
+  }
+  .py-md-10-6 {
+    padding-top: calc(0.5 * 10rem + 6px);
+    padding-bottom: calc(0.5 * 10rem + 6px);
+  }
+  .px-md-10-7 {
+    padding-right: calc(0.5 * 10rem + 7px);
+    padding-left: calc(0.5 * 10rem + 7px);
+  }
+  .py-md-10-7 {
+    padding-top: calc(0.5 * 10rem + 7px);
+    padding-bottom: calc(0.5 * 10rem + 7px);
   }
   .px-md-11 {
     padding-right: 5.5rem;
@@ -16563,6 +18108,62 @@ nav .logo img {
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
   }
+  .px-md-11-1 {
+    padding-right: calc(0.5 * 11rem + 1px);
+    padding-left: calc(0.5 * 11rem + 1px);
+  }
+  .py-md-11-1 {
+    padding-top: calc(0.5 * 11rem + 1px);
+    padding-bottom: calc(0.5 * 11rem + 1px);
+  }
+  .px-md-11-2 {
+    padding-right: calc(0.5 * 11rem + 2px);
+    padding-left: calc(0.5 * 11rem + 2px);
+  }
+  .py-md-11-2 {
+    padding-top: calc(0.5 * 11rem + 2px);
+    padding-bottom: calc(0.5 * 11rem + 2px);
+  }
+  .px-md-11-3 {
+    padding-right: calc(0.5 * 11rem + 3px);
+    padding-left: calc(0.5 * 11rem + 3px);
+  }
+  .py-md-11-3 {
+    padding-top: calc(0.5 * 11rem + 3px);
+    padding-bottom: calc(0.5 * 11rem + 3px);
+  }
+  .px-md-11-4 {
+    padding-right: calc(0.5 * 11rem + 4px);
+    padding-left: calc(0.5 * 11rem + 4px);
+  }
+  .py-md-11-4 {
+    padding-top: calc(0.5 * 11rem + 4px);
+    padding-bottom: calc(0.5 * 11rem + 4px);
+  }
+  .px-md-11-5 {
+    padding-right: calc(0.5 * 11rem + 5px);
+    padding-left: calc(0.5 * 11rem + 5px);
+  }
+  .py-md-11-5 {
+    padding-top: calc(0.5 * 11rem + 5px);
+    padding-bottom: calc(0.5 * 11rem + 5px);
+  }
+  .px-md-11-6 {
+    padding-right: calc(0.5 * 11rem + 6px);
+    padding-left: calc(0.5 * 11rem + 6px);
+  }
+  .py-md-11-6 {
+    padding-top: calc(0.5 * 11rem + 6px);
+    padding-bottom: calc(0.5 * 11rem + 6px);
+  }
+  .px-md-11-7 {
+    padding-right: calc(0.5 * 11rem + 7px);
+    padding-left: calc(0.5 * 11rem + 7px);
+  }
+  .py-md-11-7 {
+    padding-top: calc(0.5 * 11rem + 7px);
+    padding-bottom: calc(0.5 * 11rem + 7px);
+  }
   .px-md-12 {
     padding-right: 6rem;
     padding-left: 6rem;
@@ -16570,6 +18171,62 @@ nav .logo img {
   .py-md-12 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+  .px-md-12-1 {
+    padding-right: calc(0.5 * 12rem + 1px);
+    padding-left: calc(0.5 * 12rem + 1px);
+  }
+  .py-md-12-1 {
+    padding-top: calc(0.5 * 12rem + 1px);
+    padding-bottom: calc(0.5 * 12rem + 1px);
+  }
+  .px-md-12-2 {
+    padding-right: calc(0.5 * 12rem + 2px);
+    padding-left: calc(0.5 * 12rem + 2px);
+  }
+  .py-md-12-2 {
+    padding-top: calc(0.5 * 12rem + 2px);
+    padding-bottom: calc(0.5 * 12rem + 2px);
+  }
+  .px-md-12-3 {
+    padding-right: calc(0.5 * 12rem + 3px);
+    padding-left: calc(0.5 * 12rem + 3px);
+  }
+  .py-md-12-3 {
+    padding-top: calc(0.5 * 12rem + 3px);
+    padding-bottom: calc(0.5 * 12rem + 3px);
+  }
+  .px-md-12-4 {
+    padding-right: calc(0.5 * 12rem + 4px);
+    padding-left: calc(0.5 * 12rem + 4px);
+  }
+  .py-md-12-4 {
+    padding-top: calc(0.5 * 12rem + 4px);
+    padding-bottom: calc(0.5 * 12rem + 4px);
+  }
+  .px-md-12-5 {
+    padding-right: calc(0.5 * 12rem + 5px);
+    padding-left: calc(0.5 * 12rem + 5px);
+  }
+  .py-md-12-5 {
+    padding-top: calc(0.5 * 12rem + 5px);
+    padding-bottom: calc(0.5 * 12rem + 5px);
+  }
+  .px-md-12-6 {
+    padding-right: calc(0.5 * 12rem + 6px);
+    padding-left: calc(0.5 * 12rem + 6px);
+  }
+  .py-md-12-6 {
+    padding-top: calc(0.5 * 12rem + 6px);
+    padding-bottom: calc(0.5 * 12rem + 6px);
+  }
+  .px-md-12-7 {
+    padding-right: calc(0.5 * 12rem + 7px);
+    padding-left: calc(0.5 * 12rem + 7px);
+  }
+  .py-md-12-7 {
+    padding-top: calc(0.5 * 12rem + 7px);
+    padding-bottom: calc(0.5 * 12rem + 7px);
   }
 }
 
@@ -16582,6 +18239,62 @@ nav .logo img {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+  .px-sm-1-1 {
+    padding-right: calc(0.5 * 1rem + 1px);
+    padding-left: calc(0.5 * 1rem + 1px);
+  }
+  .py-sm-1-1 {
+    padding-top: calc(0.5 * 1rem + 1px);
+    padding-bottom: calc(0.5 * 1rem + 1px);
+  }
+  .px-sm-1-2 {
+    padding-right: calc(0.5 * 1rem + 2px);
+    padding-left: calc(0.5 * 1rem + 2px);
+  }
+  .py-sm-1-2 {
+    padding-top: calc(0.5 * 1rem + 2px);
+    padding-bottom: calc(0.5 * 1rem + 2px);
+  }
+  .px-sm-1-3 {
+    padding-right: calc(0.5 * 1rem + 3px);
+    padding-left: calc(0.5 * 1rem + 3px);
+  }
+  .py-sm-1-3 {
+    padding-top: calc(0.5 * 1rem + 3px);
+    padding-bottom: calc(0.5 * 1rem + 3px);
+  }
+  .px-sm-1-4 {
+    padding-right: calc(0.5 * 1rem + 4px);
+    padding-left: calc(0.5 * 1rem + 4px);
+  }
+  .py-sm-1-4 {
+    padding-top: calc(0.5 * 1rem + 4px);
+    padding-bottom: calc(0.5 * 1rem + 4px);
+  }
+  .px-sm-1-5 {
+    padding-right: calc(0.5 * 1rem + 5px);
+    padding-left: calc(0.5 * 1rem + 5px);
+  }
+  .py-sm-1-5 {
+    padding-top: calc(0.5 * 1rem + 5px);
+    padding-bottom: calc(0.5 * 1rem + 5px);
+  }
+  .px-sm-1-6 {
+    padding-right: calc(0.5 * 1rem + 6px);
+    padding-left: calc(0.5 * 1rem + 6px);
+  }
+  .py-sm-1-6 {
+    padding-top: calc(0.5 * 1rem + 6px);
+    padding-bottom: calc(0.5 * 1rem + 6px);
+  }
+  .px-sm-1-7 {
+    padding-right: calc(0.5 * 1rem + 7px);
+    padding-left: calc(0.5 * 1rem + 7px);
+  }
+  .py-sm-1-7 {
+    padding-top: calc(0.5 * 1rem + 7px);
+    padding-bottom: calc(0.5 * 1rem + 7px);
+  }
   .px-sm-2 {
     padding-right: 1rem;
     padding-left: 1rem;
@@ -16589,6 +18302,62 @@ nav .logo img {
   .py-sm-2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+  .px-sm-2-1 {
+    padding-right: calc(0.5 * 2rem + 1px);
+    padding-left: calc(0.5 * 2rem + 1px);
+  }
+  .py-sm-2-1 {
+    padding-top: calc(0.5 * 2rem + 1px);
+    padding-bottom: calc(0.5 * 2rem + 1px);
+  }
+  .px-sm-2-2 {
+    padding-right: calc(0.5 * 2rem + 2px);
+    padding-left: calc(0.5 * 2rem + 2px);
+  }
+  .py-sm-2-2 {
+    padding-top: calc(0.5 * 2rem + 2px);
+    padding-bottom: calc(0.5 * 2rem + 2px);
+  }
+  .px-sm-2-3 {
+    padding-right: calc(0.5 * 2rem + 3px);
+    padding-left: calc(0.5 * 2rem + 3px);
+  }
+  .py-sm-2-3 {
+    padding-top: calc(0.5 * 2rem + 3px);
+    padding-bottom: calc(0.5 * 2rem + 3px);
+  }
+  .px-sm-2-4 {
+    padding-right: calc(0.5 * 2rem + 4px);
+    padding-left: calc(0.5 * 2rem + 4px);
+  }
+  .py-sm-2-4 {
+    padding-top: calc(0.5 * 2rem + 4px);
+    padding-bottom: calc(0.5 * 2rem + 4px);
+  }
+  .px-sm-2-5 {
+    padding-right: calc(0.5 * 2rem + 5px);
+    padding-left: calc(0.5 * 2rem + 5px);
+  }
+  .py-sm-2-5 {
+    padding-top: calc(0.5 * 2rem + 5px);
+    padding-bottom: calc(0.5 * 2rem + 5px);
+  }
+  .px-sm-2-6 {
+    padding-right: calc(0.5 * 2rem + 6px);
+    padding-left: calc(0.5 * 2rem + 6px);
+  }
+  .py-sm-2-6 {
+    padding-top: calc(0.5 * 2rem + 6px);
+    padding-bottom: calc(0.5 * 2rem + 6px);
+  }
+  .px-sm-2-7 {
+    padding-right: calc(0.5 * 2rem + 7px);
+    padding-left: calc(0.5 * 2rem + 7px);
+  }
+  .py-sm-2-7 {
+    padding-top: calc(0.5 * 2rem + 7px);
+    padding-bottom: calc(0.5 * 2rem + 7px);
   }
   .px-sm-3 {
     padding-right: 1.5rem;
@@ -16598,6 +18367,62 @@ nav .logo img {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+  .px-sm-3-1 {
+    padding-right: calc(0.5 * 3rem + 1px);
+    padding-left: calc(0.5 * 3rem + 1px);
+  }
+  .py-sm-3-1 {
+    padding-top: calc(0.5 * 3rem + 1px);
+    padding-bottom: calc(0.5 * 3rem + 1px);
+  }
+  .px-sm-3-2 {
+    padding-right: calc(0.5 * 3rem + 2px);
+    padding-left: calc(0.5 * 3rem + 2px);
+  }
+  .py-sm-3-2 {
+    padding-top: calc(0.5 * 3rem + 2px);
+    padding-bottom: calc(0.5 * 3rem + 2px);
+  }
+  .px-sm-3-3 {
+    padding-right: calc(0.5 * 3rem + 3px);
+    padding-left: calc(0.5 * 3rem + 3px);
+  }
+  .py-sm-3-3 {
+    padding-top: calc(0.5 * 3rem + 3px);
+    padding-bottom: calc(0.5 * 3rem + 3px);
+  }
+  .px-sm-3-4 {
+    padding-right: calc(0.5 * 3rem + 4px);
+    padding-left: calc(0.5 * 3rem + 4px);
+  }
+  .py-sm-3-4 {
+    padding-top: calc(0.5 * 3rem + 4px);
+    padding-bottom: calc(0.5 * 3rem + 4px);
+  }
+  .px-sm-3-5 {
+    padding-right: calc(0.5 * 3rem + 5px);
+    padding-left: calc(0.5 * 3rem + 5px);
+  }
+  .py-sm-3-5 {
+    padding-top: calc(0.5 * 3rem + 5px);
+    padding-bottom: calc(0.5 * 3rem + 5px);
+  }
+  .px-sm-3-6 {
+    padding-right: calc(0.5 * 3rem + 6px);
+    padding-left: calc(0.5 * 3rem + 6px);
+  }
+  .py-sm-3-6 {
+    padding-top: calc(0.5 * 3rem + 6px);
+    padding-bottom: calc(0.5 * 3rem + 6px);
+  }
+  .px-sm-3-7 {
+    padding-right: calc(0.5 * 3rem + 7px);
+    padding-left: calc(0.5 * 3rem + 7px);
+  }
+  .py-sm-3-7 {
+    padding-top: calc(0.5 * 3rem + 7px);
+    padding-bottom: calc(0.5 * 3rem + 7px);
+  }
   .px-sm-4 {
     padding-right: 2rem;
     padding-left: 2rem;
@@ -16605,6 +18430,62 @@ nav .logo img {
   .py-sm-4 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .px-sm-4-1 {
+    padding-right: calc(0.5 * 4rem + 1px);
+    padding-left: calc(0.5 * 4rem + 1px);
+  }
+  .py-sm-4-1 {
+    padding-top: calc(0.5 * 4rem + 1px);
+    padding-bottom: calc(0.5 * 4rem + 1px);
+  }
+  .px-sm-4-2 {
+    padding-right: calc(0.5 * 4rem + 2px);
+    padding-left: calc(0.5 * 4rem + 2px);
+  }
+  .py-sm-4-2 {
+    padding-top: calc(0.5 * 4rem + 2px);
+    padding-bottom: calc(0.5 * 4rem + 2px);
+  }
+  .px-sm-4-3 {
+    padding-right: calc(0.5 * 4rem + 3px);
+    padding-left: calc(0.5 * 4rem + 3px);
+  }
+  .py-sm-4-3 {
+    padding-top: calc(0.5 * 4rem + 3px);
+    padding-bottom: calc(0.5 * 4rem + 3px);
+  }
+  .px-sm-4-4 {
+    padding-right: calc(0.5 * 4rem + 4px);
+    padding-left: calc(0.5 * 4rem + 4px);
+  }
+  .py-sm-4-4 {
+    padding-top: calc(0.5 * 4rem + 4px);
+    padding-bottom: calc(0.5 * 4rem + 4px);
+  }
+  .px-sm-4-5 {
+    padding-right: calc(0.5 * 4rem + 5px);
+    padding-left: calc(0.5 * 4rem + 5px);
+  }
+  .py-sm-4-5 {
+    padding-top: calc(0.5 * 4rem + 5px);
+    padding-bottom: calc(0.5 * 4rem + 5px);
+  }
+  .px-sm-4-6 {
+    padding-right: calc(0.5 * 4rem + 6px);
+    padding-left: calc(0.5 * 4rem + 6px);
+  }
+  .py-sm-4-6 {
+    padding-top: calc(0.5 * 4rem + 6px);
+    padding-bottom: calc(0.5 * 4rem + 6px);
+  }
+  .px-sm-4-7 {
+    padding-right: calc(0.5 * 4rem + 7px);
+    padding-left: calc(0.5 * 4rem + 7px);
+  }
+  .py-sm-4-7 {
+    padding-top: calc(0.5 * 4rem + 7px);
+    padding-bottom: calc(0.5 * 4rem + 7px);
   }
   .px-sm-5 {
     padding-right: 2.5rem;
@@ -16614,6 +18495,62 @@ nav .logo img {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+  .px-sm-5-1 {
+    padding-right: calc(0.5 * 5rem + 1px);
+    padding-left: calc(0.5 * 5rem + 1px);
+  }
+  .py-sm-5-1 {
+    padding-top: calc(0.5 * 5rem + 1px);
+    padding-bottom: calc(0.5 * 5rem + 1px);
+  }
+  .px-sm-5-2 {
+    padding-right: calc(0.5 * 5rem + 2px);
+    padding-left: calc(0.5 * 5rem + 2px);
+  }
+  .py-sm-5-2 {
+    padding-top: calc(0.5 * 5rem + 2px);
+    padding-bottom: calc(0.5 * 5rem + 2px);
+  }
+  .px-sm-5-3 {
+    padding-right: calc(0.5 * 5rem + 3px);
+    padding-left: calc(0.5 * 5rem + 3px);
+  }
+  .py-sm-5-3 {
+    padding-top: calc(0.5 * 5rem + 3px);
+    padding-bottom: calc(0.5 * 5rem + 3px);
+  }
+  .px-sm-5-4 {
+    padding-right: calc(0.5 * 5rem + 4px);
+    padding-left: calc(0.5 * 5rem + 4px);
+  }
+  .py-sm-5-4 {
+    padding-top: calc(0.5 * 5rem + 4px);
+    padding-bottom: calc(0.5 * 5rem + 4px);
+  }
+  .px-sm-5-5 {
+    padding-right: calc(0.5 * 5rem + 5px);
+    padding-left: calc(0.5 * 5rem + 5px);
+  }
+  .py-sm-5-5 {
+    padding-top: calc(0.5 * 5rem + 5px);
+    padding-bottom: calc(0.5 * 5rem + 5px);
+  }
+  .px-sm-5-6 {
+    padding-right: calc(0.5 * 5rem + 6px);
+    padding-left: calc(0.5 * 5rem + 6px);
+  }
+  .py-sm-5-6 {
+    padding-top: calc(0.5 * 5rem + 6px);
+    padding-bottom: calc(0.5 * 5rem + 6px);
+  }
+  .px-sm-5-7 {
+    padding-right: calc(0.5 * 5rem + 7px);
+    padding-left: calc(0.5 * 5rem + 7px);
+  }
+  .py-sm-5-7 {
+    padding-top: calc(0.5 * 5rem + 7px);
+    padding-bottom: calc(0.5 * 5rem + 7px);
+  }
   .px-sm-6 {
     padding-right: 3rem;
     padding-left: 3rem;
@@ -16621,6 +18558,62 @@ nav .logo img {
   .py-sm-6 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+  .px-sm-6-1 {
+    padding-right: calc(0.5 * 6rem + 1px);
+    padding-left: calc(0.5 * 6rem + 1px);
+  }
+  .py-sm-6-1 {
+    padding-top: calc(0.5 * 6rem + 1px);
+    padding-bottom: calc(0.5 * 6rem + 1px);
+  }
+  .px-sm-6-2 {
+    padding-right: calc(0.5 * 6rem + 2px);
+    padding-left: calc(0.5 * 6rem + 2px);
+  }
+  .py-sm-6-2 {
+    padding-top: calc(0.5 * 6rem + 2px);
+    padding-bottom: calc(0.5 * 6rem + 2px);
+  }
+  .px-sm-6-3 {
+    padding-right: calc(0.5 * 6rem + 3px);
+    padding-left: calc(0.5 * 6rem + 3px);
+  }
+  .py-sm-6-3 {
+    padding-top: calc(0.5 * 6rem + 3px);
+    padding-bottom: calc(0.5 * 6rem + 3px);
+  }
+  .px-sm-6-4 {
+    padding-right: calc(0.5 * 6rem + 4px);
+    padding-left: calc(0.5 * 6rem + 4px);
+  }
+  .py-sm-6-4 {
+    padding-top: calc(0.5 * 6rem + 4px);
+    padding-bottom: calc(0.5 * 6rem + 4px);
+  }
+  .px-sm-6-5 {
+    padding-right: calc(0.5 * 6rem + 5px);
+    padding-left: calc(0.5 * 6rem + 5px);
+  }
+  .py-sm-6-5 {
+    padding-top: calc(0.5 * 6rem + 5px);
+    padding-bottom: calc(0.5 * 6rem + 5px);
+  }
+  .px-sm-6-6 {
+    padding-right: calc(0.5 * 6rem + 6px);
+    padding-left: calc(0.5 * 6rem + 6px);
+  }
+  .py-sm-6-6 {
+    padding-top: calc(0.5 * 6rem + 6px);
+    padding-bottom: calc(0.5 * 6rem + 6px);
+  }
+  .px-sm-6-7 {
+    padding-right: calc(0.5 * 6rem + 7px);
+    padding-left: calc(0.5 * 6rem + 7px);
+  }
+  .py-sm-6-7 {
+    padding-top: calc(0.5 * 6rem + 7px);
+    padding-bottom: calc(0.5 * 6rem + 7px);
   }
   .px-sm-7 {
     padding-right: 3.5rem;
@@ -16630,6 +18623,62 @@ nav .logo img {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
   }
+  .px-sm-7-1 {
+    padding-right: calc(0.5 * 7rem + 1px);
+    padding-left: calc(0.5 * 7rem + 1px);
+  }
+  .py-sm-7-1 {
+    padding-top: calc(0.5 * 7rem + 1px);
+    padding-bottom: calc(0.5 * 7rem + 1px);
+  }
+  .px-sm-7-2 {
+    padding-right: calc(0.5 * 7rem + 2px);
+    padding-left: calc(0.5 * 7rem + 2px);
+  }
+  .py-sm-7-2 {
+    padding-top: calc(0.5 * 7rem + 2px);
+    padding-bottom: calc(0.5 * 7rem + 2px);
+  }
+  .px-sm-7-3 {
+    padding-right: calc(0.5 * 7rem + 3px);
+    padding-left: calc(0.5 * 7rem + 3px);
+  }
+  .py-sm-7-3 {
+    padding-top: calc(0.5 * 7rem + 3px);
+    padding-bottom: calc(0.5 * 7rem + 3px);
+  }
+  .px-sm-7-4 {
+    padding-right: calc(0.5 * 7rem + 4px);
+    padding-left: calc(0.5 * 7rem + 4px);
+  }
+  .py-sm-7-4 {
+    padding-top: calc(0.5 * 7rem + 4px);
+    padding-bottom: calc(0.5 * 7rem + 4px);
+  }
+  .px-sm-7-5 {
+    padding-right: calc(0.5 * 7rem + 5px);
+    padding-left: calc(0.5 * 7rem + 5px);
+  }
+  .py-sm-7-5 {
+    padding-top: calc(0.5 * 7rem + 5px);
+    padding-bottom: calc(0.5 * 7rem + 5px);
+  }
+  .px-sm-7-6 {
+    padding-right: calc(0.5 * 7rem + 6px);
+    padding-left: calc(0.5 * 7rem + 6px);
+  }
+  .py-sm-7-6 {
+    padding-top: calc(0.5 * 7rem + 6px);
+    padding-bottom: calc(0.5 * 7rem + 6px);
+  }
+  .px-sm-7-7 {
+    padding-right: calc(0.5 * 7rem + 7px);
+    padding-left: calc(0.5 * 7rem + 7px);
+  }
+  .py-sm-7-7 {
+    padding-top: calc(0.5 * 7rem + 7px);
+    padding-bottom: calc(0.5 * 7rem + 7px);
+  }
   .px-sm-8 {
     padding-right: 4rem;
     padding-left: 4rem;
@@ -16637,6 +18686,62 @@ nav .logo img {
   .py-sm-8 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+  .px-sm-8-1 {
+    padding-right: calc(0.5 * 8rem + 1px);
+    padding-left: calc(0.5 * 8rem + 1px);
+  }
+  .py-sm-8-1 {
+    padding-top: calc(0.5 * 8rem + 1px);
+    padding-bottom: calc(0.5 * 8rem + 1px);
+  }
+  .px-sm-8-2 {
+    padding-right: calc(0.5 * 8rem + 2px);
+    padding-left: calc(0.5 * 8rem + 2px);
+  }
+  .py-sm-8-2 {
+    padding-top: calc(0.5 * 8rem + 2px);
+    padding-bottom: calc(0.5 * 8rem + 2px);
+  }
+  .px-sm-8-3 {
+    padding-right: calc(0.5 * 8rem + 3px);
+    padding-left: calc(0.5 * 8rem + 3px);
+  }
+  .py-sm-8-3 {
+    padding-top: calc(0.5 * 8rem + 3px);
+    padding-bottom: calc(0.5 * 8rem + 3px);
+  }
+  .px-sm-8-4 {
+    padding-right: calc(0.5 * 8rem + 4px);
+    padding-left: calc(0.5 * 8rem + 4px);
+  }
+  .py-sm-8-4 {
+    padding-top: calc(0.5 * 8rem + 4px);
+    padding-bottom: calc(0.5 * 8rem + 4px);
+  }
+  .px-sm-8-5 {
+    padding-right: calc(0.5 * 8rem + 5px);
+    padding-left: calc(0.5 * 8rem + 5px);
+  }
+  .py-sm-8-5 {
+    padding-top: calc(0.5 * 8rem + 5px);
+    padding-bottom: calc(0.5 * 8rem + 5px);
+  }
+  .px-sm-8-6 {
+    padding-right: calc(0.5 * 8rem + 6px);
+    padding-left: calc(0.5 * 8rem + 6px);
+  }
+  .py-sm-8-6 {
+    padding-top: calc(0.5 * 8rem + 6px);
+    padding-bottom: calc(0.5 * 8rem + 6px);
+  }
+  .px-sm-8-7 {
+    padding-right: calc(0.5 * 8rem + 7px);
+    padding-left: calc(0.5 * 8rem + 7px);
+  }
+  .py-sm-8-7 {
+    padding-top: calc(0.5 * 8rem + 7px);
+    padding-bottom: calc(0.5 * 8rem + 7px);
   }
   .px-sm-9 {
     padding-right: 4.5rem;
@@ -16646,6 +18751,62 @@ nav .logo img {
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
   }
+  .px-sm-9-1 {
+    padding-right: calc(0.5 * 9rem + 1px);
+    padding-left: calc(0.5 * 9rem + 1px);
+  }
+  .py-sm-9-1 {
+    padding-top: calc(0.5 * 9rem + 1px);
+    padding-bottom: calc(0.5 * 9rem + 1px);
+  }
+  .px-sm-9-2 {
+    padding-right: calc(0.5 * 9rem + 2px);
+    padding-left: calc(0.5 * 9rem + 2px);
+  }
+  .py-sm-9-2 {
+    padding-top: calc(0.5 * 9rem + 2px);
+    padding-bottom: calc(0.5 * 9rem + 2px);
+  }
+  .px-sm-9-3 {
+    padding-right: calc(0.5 * 9rem + 3px);
+    padding-left: calc(0.5 * 9rem + 3px);
+  }
+  .py-sm-9-3 {
+    padding-top: calc(0.5 * 9rem + 3px);
+    padding-bottom: calc(0.5 * 9rem + 3px);
+  }
+  .px-sm-9-4 {
+    padding-right: calc(0.5 * 9rem + 4px);
+    padding-left: calc(0.5 * 9rem + 4px);
+  }
+  .py-sm-9-4 {
+    padding-top: calc(0.5 * 9rem + 4px);
+    padding-bottom: calc(0.5 * 9rem + 4px);
+  }
+  .px-sm-9-5 {
+    padding-right: calc(0.5 * 9rem + 5px);
+    padding-left: calc(0.5 * 9rem + 5px);
+  }
+  .py-sm-9-5 {
+    padding-top: calc(0.5 * 9rem + 5px);
+    padding-bottom: calc(0.5 * 9rem + 5px);
+  }
+  .px-sm-9-6 {
+    padding-right: calc(0.5 * 9rem + 6px);
+    padding-left: calc(0.5 * 9rem + 6px);
+  }
+  .py-sm-9-6 {
+    padding-top: calc(0.5 * 9rem + 6px);
+    padding-bottom: calc(0.5 * 9rem + 6px);
+  }
+  .px-sm-9-7 {
+    padding-right: calc(0.5 * 9rem + 7px);
+    padding-left: calc(0.5 * 9rem + 7px);
+  }
+  .py-sm-9-7 {
+    padding-top: calc(0.5 * 9rem + 7px);
+    padding-bottom: calc(0.5 * 9rem + 7px);
+  }
   .px-sm-10 {
     padding-right: 5rem;
     padding-left: 5rem;
@@ -16653,6 +18814,62 @@ nav .logo img {
   .py-sm-10 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+  .px-sm-10-1 {
+    padding-right: calc(0.5 * 10rem + 1px);
+    padding-left: calc(0.5 * 10rem + 1px);
+  }
+  .py-sm-10-1 {
+    padding-top: calc(0.5 * 10rem + 1px);
+    padding-bottom: calc(0.5 * 10rem + 1px);
+  }
+  .px-sm-10-2 {
+    padding-right: calc(0.5 * 10rem + 2px);
+    padding-left: calc(0.5 * 10rem + 2px);
+  }
+  .py-sm-10-2 {
+    padding-top: calc(0.5 * 10rem + 2px);
+    padding-bottom: calc(0.5 * 10rem + 2px);
+  }
+  .px-sm-10-3 {
+    padding-right: calc(0.5 * 10rem + 3px);
+    padding-left: calc(0.5 * 10rem + 3px);
+  }
+  .py-sm-10-3 {
+    padding-top: calc(0.5 * 10rem + 3px);
+    padding-bottom: calc(0.5 * 10rem + 3px);
+  }
+  .px-sm-10-4 {
+    padding-right: calc(0.5 * 10rem + 4px);
+    padding-left: calc(0.5 * 10rem + 4px);
+  }
+  .py-sm-10-4 {
+    padding-top: calc(0.5 * 10rem + 4px);
+    padding-bottom: calc(0.5 * 10rem + 4px);
+  }
+  .px-sm-10-5 {
+    padding-right: calc(0.5 * 10rem + 5px);
+    padding-left: calc(0.5 * 10rem + 5px);
+  }
+  .py-sm-10-5 {
+    padding-top: calc(0.5 * 10rem + 5px);
+    padding-bottom: calc(0.5 * 10rem + 5px);
+  }
+  .px-sm-10-6 {
+    padding-right: calc(0.5 * 10rem + 6px);
+    padding-left: calc(0.5 * 10rem + 6px);
+  }
+  .py-sm-10-6 {
+    padding-top: calc(0.5 * 10rem + 6px);
+    padding-bottom: calc(0.5 * 10rem + 6px);
+  }
+  .px-sm-10-7 {
+    padding-right: calc(0.5 * 10rem + 7px);
+    padding-left: calc(0.5 * 10rem + 7px);
+  }
+  .py-sm-10-7 {
+    padding-top: calc(0.5 * 10rem + 7px);
+    padding-bottom: calc(0.5 * 10rem + 7px);
   }
   .px-sm-11 {
     padding-right: 5.5rem;
@@ -16662,6 +18879,62 @@ nav .logo img {
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
   }
+  .px-sm-11-1 {
+    padding-right: calc(0.5 * 11rem + 1px);
+    padding-left: calc(0.5 * 11rem + 1px);
+  }
+  .py-sm-11-1 {
+    padding-top: calc(0.5 * 11rem + 1px);
+    padding-bottom: calc(0.5 * 11rem + 1px);
+  }
+  .px-sm-11-2 {
+    padding-right: calc(0.5 * 11rem + 2px);
+    padding-left: calc(0.5 * 11rem + 2px);
+  }
+  .py-sm-11-2 {
+    padding-top: calc(0.5 * 11rem + 2px);
+    padding-bottom: calc(0.5 * 11rem + 2px);
+  }
+  .px-sm-11-3 {
+    padding-right: calc(0.5 * 11rem + 3px);
+    padding-left: calc(0.5 * 11rem + 3px);
+  }
+  .py-sm-11-3 {
+    padding-top: calc(0.5 * 11rem + 3px);
+    padding-bottom: calc(0.5 * 11rem + 3px);
+  }
+  .px-sm-11-4 {
+    padding-right: calc(0.5 * 11rem + 4px);
+    padding-left: calc(0.5 * 11rem + 4px);
+  }
+  .py-sm-11-4 {
+    padding-top: calc(0.5 * 11rem + 4px);
+    padding-bottom: calc(0.5 * 11rem + 4px);
+  }
+  .px-sm-11-5 {
+    padding-right: calc(0.5 * 11rem + 5px);
+    padding-left: calc(0.5 * 11rem + 5px);
+  }
+  .py-sm-11-5 {
+    padding-top: calc(0.5 * 11rem + 5px);
+    padding-bottom: calc(0.5 * 11rem + 5px);
+  }
+  .px-sm-11-6 {
+    padding-right: calc(0.5 * 11rem + 6px);
+    padding-left: calc(0.5 * 11rem + 6px);
+  }
+  .py-sm-11-6 {
+    padding-top: calc(0.5 * 11rem + 6px);
+    padding-bottom: calc(0.5 * 11rem + 6px);
+  }
+  .px-sm-11-7 {
+    padding-right: calc(0.5 * 11rem + 7px);
+    padding-left: calc(0.5 * 11rem + 7px);
+  }
+  .py-sm-11-7 {
+    padding-top: calc(0.5 * 11rem + 7px);
+    padding-bottom: calc(0.5 * 11rem + 7px);
+  }
   .px-sm-12 {
     padding-right: 6rem;
     padding-left: 6rem;
@@ -16669,6 +18942,62 @@ nav .logo img {
   .py-sm-12 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+  .px-sm-12-1 {
+    padding-right: calc(0.5 * 12rem + 1px);
+    padding-left: calc(0.5 * 12rem + 1px);
+  }
+  .py-sm-12-1 {
+    padding-top: calc(0.5 * 12rem + 1px);
+    padding-bottom: calc(0.5 * 12rem + 1px);
+  }
+  .px-sm-12-2 {
+    padding-right: calc(0.5 * 12rem + 2px);
+    padding-left: calc(0.5 * 12rem + 2px);
+  }
+  .py-sm-12-2 {
+    padding-top: calc(0.5 * 12rem + 2px);
+    padding-bottom: calc(0.5 * 12rem + 2px);
+  }
+  .px-sm-12-3 {
+    padding-right: calc(0.5 * 12rem + 3px);
+    padding-left: calc(0.5 * 12rem + 3px);
+  }
+  .py-sm-12-3 {
+    padding-top: calc(0.5 * 12rem + 3px);
+    padding-bottom: calc(0.5 * 12rem + 3px);
+  }
+  .px-sm-12-4 {
+    padding-right: calc(0.5 * 12rem + 4px);
+    padding-left: calc(0.5 * 12rem + 4px);
+  }
+  .py-sm-12-4 {
+    padding-top: calc(0.5 * 12rem + 4px);
+    padding-bottom: calc(0.5 * 12rem + 4px);
+  }
+  .px-sm-12-5 {
+    padding-right: calc(0.5 * 12rem + 5px);
+    padding-left: calc(0.5 * 12rem + 5px);
+  }
+  .py-sm-12-5 {
+    padding-top: calc(0.5 * 12rem + 5px);
+    padding-bottom: calc(0.5 * 12rem + 5px);
+  }
+  .px-sm-12-6 {
+    padding-right: calc(0.5 * 12rem + 6px);
+    padding-left: calc(0.5 * 12rem + 6px);
+  }
+  .py-sm-12-6 {
+    padding-top: calc(0.5 * 12rem + 6px);
+    padding-bottom: calc(0.5 * 12rem + 6px);
+  }
+  .px-sm-12-7 {
+    padding-right: calc(0.5 * 12rem + 7px);
+    padding-left: calc(0.5 * 12rem + 7px);
+  }
+  .py-sm-12-7 {
+    padding-top: calc(0.5 * 12rem + 7px);
+    padding-bottom: calc(0.5 * 12rem + 7px);
   }
 }
 

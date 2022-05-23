@@ -1,5 +1,5 @@
 @mixin pc {
-  @media screen and (min-width: map-get($breakpoint, "lg")) {
+  @media screen and (max-width: map-get($breakpoint, "lg")) {
     @content;
   }
 }

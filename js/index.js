@@ -109,7 +109,7 @@ const show = comments.slice((page - 1) * 3, page * 3)
 let comment_str = ''
 for(const item of show){
 
-  comment_str === '' ?  comment_str += `<li>` : comment_str += `<li class="hide-if-need">`
+  comment_str === '' ?  comment_str += `<li>` : comment_str += `<li class="show-on-pad">`
   comment_str += `
     <div class="user-image circle">
       <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/${item.img}" alt="${item.user}">

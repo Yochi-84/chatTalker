@@ -20,10 +20,10 @@ strong {
   @include font(3rem, 700, 4.375rem);
 
   display: block;
-}
 
-small {
-  @include font(1.25rem, 400, 1.8125rem);
+  @include pc {
+    @include font(2rem, 700, 2.875rem);
+  }
 }
 
 span {
