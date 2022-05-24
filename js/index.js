@@ -64,7 +64,7 @@ const comments = [
   },
   {
     img: 'user02.jpg',
-    content: '團隊很積極的協助追討，針對機器人進行優化，讓我們一個月內提高100個追蹤項，客戶體驗回饋很正面！',
+    content: '團隊很積極的協助追討，針對機器人進行優化，讓我們一個月內提高100個追討項，客戶體驗回饋很正面！',
     company: 'SAYWHAT 討債集團',
     user: 'ZoeNeo 小隊長',
     star: 5
