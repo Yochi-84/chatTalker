@@ -880,6 +880,10 @@ nav .logo img {
   }
 }
 
+.project-list::-webkit-scrollbar {
+  display: none;
+}
+
 .project-list li {
   font-size: 1.125rem;
   font-family: "Comfortaa", serif;

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat Talker</title>
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
@@ -18,18 +19,18 @@
       <a href="project.html" class="btn btn-secondary">方案費用</a>
     </nav>
     <div class="project-text container">
-      <strong class="mb-2">計費方式說明</strong>
-      <h1>聊天機器人幫你實現增粉、轉單、客服等目標</h1>
+      <strong class="mb-2" data-aos="fade-down">計費方式說明</strong>
+      <h1 data-aos="flip-right">聊天機器人幫你實現增粉、轉單、客服等目標</h1>
     </div>
   </section>
   <section class="bg-lyh">
     <div class="container text-center mt-md-7-4">
-      <h2>彈性選擇，提供您選擇最適合的方案</h2>
-      <ul id="project-list" class="project-list mt-6 mt-md-3">
+      <h2 data-aos="fade-right">彈性選擇，提供您選擇最適合的方案</h2>
+      <ul id="project-list" class="project-list mt-6 mt-md-3" data-aos="flip-down">
         <!-- JS 輸出 -->
       </ul>
       <ul class="project-detail mt-6-6">
-        <li>
+        <li data-aos="zoom-in">
           <h3>基本版</h3>
           <div class="project-info">
             <p class="mb-4">提供中小企業最必要的功能<br>完整建立分眾以達到精準的行銷自動化</p>
@@ -53,7 +54,7 @@
             <a href="#" class="btn btn-primary">立即體驗</a>
           </div>
         </li>
-        <li>
+        <li data-aos="zoom-in">
           <h3>標準版</h3>
           <div class="project-info">
             <p class="mb-4">建立企業流量池，全通路數據整合與交換<br>高可靠性服務</p>
@@ -80,17 +81,17 @@
       </ul>
     </div>
     <div class="container mt-12-4 mt-md-7-4 text-center">
-      <h2>常見問題</h2>
+      <h2 data-aos="fade">常見問題</h2>
       <ul class="faq mt-6 text-left">
-        <li>
+        <li data-aos="fade-up" data-aos-duration="500">
           <div class="faq-q" id="q1" onclick="faqToggle(1)">我要怎麼變更方案？</div>
           <div class="faq-a" id="a1">請聯絡您的業務專員修改訂閱方案，我們將為您進行變更流程。</div>
         </li>
-        <li>
+        <li data-aos="fade-up" data-aos-duration="900">
           <div class="faq-q" id="q2" onclick="faqToggle(2)">如果我沒有LINE官方帳號怎麼辦？</div>
           <div class="faq-a" id="a2">沒關係的，只要您是我們任何一個方案的夥伴，我們的專員可以協助辦理哦！</div>
         </li>
-        <li>
+        <li data-aos="fade-up" data-aos-duration="1300">
           <div class="faq-q" id="q3" onclick="faqToggle(3)">非上班日有客服支援嗎？</div>
           <div class="faq-a" id="a3">當然哦！我們錢都收了，不會拋棄你的<br>請您直接來我們公司，我們假日也都在辦公室。</div>
         </li>
@@ -102,5 +103,12 @@
   </footer>
   <script src="./js/all.js"></script>
   <script src="./js/project.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
 </html>
