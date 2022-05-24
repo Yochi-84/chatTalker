@@ -862,15 +862,8 @@ nav .logo img {
 }
 
 .project-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
   overflow-x: auto;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 768px) {
@@ -889,6 +882,7 @@ nav .logo img {
   font-family: "Comfortaa", serif;
   font-weight: 400;
   line-height: 1.625rem;
+  display: inline-block;
   padding: 11px calc(min(3.5vw, 31px));
   white-space: nowrap;
   color: #56c4c5;
@@ -922,6 +916,16 @@ nav .logo img {
   color: #fff;
   background-color: #ff5d50;
   border-color: #ff5d50;
+}
+
+.project-list li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .project-list li:not(:last-of-type) {
+    margin-right: 6px;
+  }
 }
 
 .project-detail {

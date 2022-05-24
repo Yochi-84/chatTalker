@@ -64,17 +64,17 @@ const comments = [
   },
   {
     img: 'user02.jpg',
-    content: '團隊很積極的協助追討，針對機器人進行優化，讓我們一個月內提高100個追蹤者，客戶體驗回饋很正面！',
+    content: '團隊很積極的協助追討，針對機器人進行優化，讓我們一個月內提高100個追蹤項，客戶體驗回饋很正面！',
     company: 'SAYWHAT 討債集團',
     user: 'ZoeNeo 小隊長',
-    star: 4
+    star: 5
   },
   {
     img: 'user03.jpg',
     content: '不錯...好用...生意...棒棒...',
     company: '財哥專業檳榔攤',
     user: '財哥',
-    star: 5
+    star: 4
   },
   {
     img: 'user01.jpg',

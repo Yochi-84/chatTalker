@@ -394,10 +394,8 @@ nav {
 }
 
 .project-list {
-  display: flex;
-  justify-content: center;
-  column-gap: 1rem;
   overflow-x: auto;
+  white-space: nowrap;
 
   @include pad {
     column-gap: 6px;
@@ -410,6 +408,7 @@ nav {
   li {
     @include font(1.125rem, 400, 1.625rem, $font-secondary);
 
+    display: inline-block;
     padding: 11px calc(min(3.5vw, 31px));
     white-space: nowrap;
     color: $primary;
@@ -434,6 +433,14 @@ nav {
       color: #fff;
       background-color: $secondary;
       border-color: $secondary;
+    }
+  }
+
+  li:not(:last-of-type) {
+    margin-right: 1rem;
+
+    @include pad {
+      margin-right: 6px;
     }
   }
 }
