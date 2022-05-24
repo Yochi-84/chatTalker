@@ -1,23 +1,23 @@
 const project = {
   '10000': {
-    b_price: 600,
-    s_price: 1600
+    b_price: '600',
+    s_price: '1,600'
   },
   '15000': {
-    b_price: 850,
-    s_price: 1850
+    b_price: '850',
+    s_price: '1,850'
   },
   '20000': {
-    b_price: 1000,
-    s_price: 2000
+    b_price: '1,000',
+    s_price: '2,000'
   },
   '25000': {
-    b_price: 1100,
-    s_price: 2100
+    b_price: '1,100',
+    s_price: '2,100'
   },
   '>25000':{
-    b_price: 1500,
-    s_price: 2500
+    b_price: '1,500',
+    s_price: '2,500'
   }
 }
 

@@ -1,13 +1,13 @@
 .bg-main {
   padding-bottom: 117px;
   background:
-    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px calc(100% + 180px),
-  url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat 100% 0 / 850.36px 768px;
+    url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat -180px calc(100% + 180px),
+    url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg") no-repeat 100% 0 / 850.36px 768px;
 
   @include pc {
     background:
-      url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px calc(100% + 180px),
-    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat top top / 60vw 768px;
+      url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat -180px calc(100% + 180px),
+      url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg") no-repeat top top / 60vw 768px;
   }
 
   @include pad {
@@ -17,23 +17,23 @@
 }
 
 .bg-lgb {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px -180px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat -180px -180px;
 
   @include pad {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -63px 10px / 126px;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat -63px 10px / 126px;
   }
 }
 
 .bg-rgt {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat calc(100% + 100px) calc(100% + 200px);
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg") no-repeat calc(100% + 100px) calc(100% + 200px);
 
   @include pad {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat calc(100% + 47px) 100% / 135px;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg") no-repeat calc(100% + 47px) 100% / 135px;
   }
 }
 
 .bg-rgb {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat calc(100% + 100px) -117px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg") no-repeat calc(100% + 100px) -117px;
 
   @include pad {
     background: none;
@@ -41,30 +41,27 @@
 }
 
 .bg-lyf {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat 50px 140px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat 50px 140px;
 
   @include pad {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat -76px 40px / 153px;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat -76px 40px / 153px;
   }
 }
 
 .bg-mf {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg) no-repeat top / 100%;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg") no-repeat top / 100%;
 
-  @include pad {
-    background:
-      url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg) no-repeat top center,
-    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/talk01.svg) no-repeat calc(100% - 10px) 35% /60px,
-    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/talk04.svg) no-repeat 10% 50% / 60px;
+  @include phone {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg") no-repeat top / 100%;
   }
 }
 
 .bg-project {
   position: relative;
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg) no-repeat 100% 0;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg") no-repeat 100% 0;
 
-  @include pad {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg) no-repeat 100% 0;
+  @include phone {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg") no-repeat 0 68px;
   }
 
   &::before {
@@ -77,11 +74,20 @@
     background-color: #f7f9fd;
     content: "";
     border-bottom-left-radius: 300px;
+
+    @include pad {
+      top: 72px;
+      height: 495px;
+    }
   }
 }
 
 .bg-lyh {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat -267px 318px /361px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat -267px 318px /361px;
+
+  @include pad {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat -108px 630px /204px;
+  }
 }
 
 nav {
@@ -96,7 +102,7 @@ nav {
     z-index: 3;
     width: 100%;
     background-color: #fff;
-    box-shadow: 0 2px 2px #ffd153;
+    box-shadow: 0 2px 0 1px #ffd153;
   }
 
   .logo img {
@@ -366,8 +372,17 @@ nav {
 }
 
 .footer-block {
-  padding: 260px 0  0;
+  position: relative;
+  padding-top: calc(max(18vw, 260px));
   text-align: center;
+
+  @include pc {
+    padding-top: calc(min(19vw, 260px));
+  }
+
+  @include phone {
+    padding-top: 352px;
+  }
 
   h2 {
     @include font(2rem, 700, 2.875rem);
@@ -381,16 +396,34 @@ nav {
 .project-list {
   display: flex;
   justify-content: center;
+  column-gap: 1rem;
+  overflow-x: auto;
+
+  @include pad {
+    column-gap: 6px;
+  }
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
 
   li {
     @include font(1.125rem, 400, 1.625rem, $font-secondary);
 
-    padding: 11px 31px;
+    padding: 11px calc(min(3.5vw, 31px));
+    white-space: nowrap;
     color: $primary;
     border: 1px solid $primary;
     border-radius: 27px;
     transition: 0.3s;
     cursor: pointer;
+    user-select: none;
+
+    @include pad {
+      @include font(1rem, 400, 1.5rem, $font-secondary);
+
+      padding: 8px 16px;
+    }
 
     &.is-active {
       color: #fff;
@@ -403,18 +436,17 @@ nav {
       border-color: $secondary;
     }
   }
-
-  li:not(:last-of-type) {
-    margin-right: 1rem;
-  }
 }
 
 .project-detail {
   display: flex;
   justify-content: center;
-  column-gap: 1.3125rem;
+  flex-wrap: wrap;
+  gap: 1.5rem 1.3125rem;
 
   > li {
+    min-width: 355px;
+    background-color: #fff;
     border-radius: $brs;
     box-shadow: $shadow;
   }
@@ -429,8 +461,26 @@ nav {
   .project-info {
     padding: 32px 23px 32px 29px;
 
+    @include pad {
+      padding: 1.5rem 1rem;
+    }
+
+    li {
+      display: flex;
+    }
+
     img {
+      margin-top: 4px;
       margin-right: 12.94px;
+      width: 19.56px;
+      height: 16px;
+      vertical-align: middle;
+
+      @include pad {
+        margin-right: 16px;
+        width: 16px;
+        height: 14px;
+      }
     }
   }
 
@@ -449,27 +499,49 @@ nav {
 
     margin-right: 17px;
     margin-left: 21px;
+
+    @include pad {
+      margin-right: 6px;
+      margin-left: 6px;
+    }
   }
 
   &-block {
-    padding: 24px 32px;
+    padding: 1.5rem 0;
+    min-width: 139px;
     background-color: #f5f5f5;
     border-radius: $brs;
+
+    @include pad {
+      padding: 1rem 0;
+    }
 
     h4 {
       @include font(0.75rem, 400, 1.0625rem);
 
       margin-bottom: 0.5rem;
+      white-space: nowrap;
     }
 
     p {
-      @include font(2rem, 400, 2.1875rem);
+      @include font(2rem, 400, 2.1875rem, $font-secondary);
+
+      white-space: nowrap;
+
+      @include pad {
+        @include font(1.75rem, 400, 2rem, $font-secondary);
+      }
     }
 
     sub {
-      @include font(0.75rem, 400, 1.0625rem);
+      @include font(0.75rem, 700, 1.0625rem);
 
+      vertical-align: middle;
       margin-left: 0.5rem;
+
+      @include pad {
+        margin-left: 0.25rem;
+      }
     }
   }
 }
@@ -486,7 +558,12 @@ nav {
     position: relative;
     padding: 1rem 2rem;
     cursor: pointer;
-    transition: 0.1s;
+
+    @include pad {
+      @include font(1rem ,400 ,1.5rem);
+
+      padding: 1rem;
+    }
 
     &::before,
     &::after {
@@ -500,6 +577,13 @@ nav {
       right: 41px;
       width: 2px;
       height: 20px;
+      transition: 0.1s;
+
+      @include pad {
+        top: calc(50% - 8px);
+        right: 23px;
+        height: 16px;
+      }
     }
 
     &::after {
@@ -507,6 +591,11 @@ nav {
       right: 32px;
       width: 20px;
       height: 2px;
+
+      @include pad {
+        right: 16px;
+        width: 16px;
+      }
     }
 
     &.is-open {
@@ -515,12 +604,16 @@ nav {
     }
 
     &.is-open::before {
-      display: none;
+      height: 0;
     }
 
     &.is-open + .faq-a {
       padding: 8px 32px 32px;
       max-height: 100vh;
+
+      @include pad {
+        padding: 0 1rem 1.5rem;
+      }
     }
   }
 
@@ -532,6 +625,10 @@ nav {
     max-height: 0;
     color: $reply-gray;
     transition: 0.1s;
+
+    @include pad {
+      padding: 0 1rem;
+    }
   }
 
   li:not(:last-of-type) {

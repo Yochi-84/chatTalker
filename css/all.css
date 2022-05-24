@@ -164,6 +164,14 @@ h2 {
   line-height: 2.875rem;
 }
 
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+}
+
 strong {
   font-size: 3rem;
   font-weight: 700;
@@ -185,6 +193,14 @@ span {
   line-height: 1.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  span {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+  }
+}
+
 input,
 textarea,
 button,
@@ -195,6 +211,23 @@ label {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #bbb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #56c4c5;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5d50;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1088px;
@@ -203,7 +236,7 @@ label {
 @media screen and (max-width: 1128px) {
   .container {
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 16px;
   }
 }
 
@@ -221,17 +254,30 @@ label {
   color: #fff;
   background-color: #56c4c5;
   border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 768px) {
   .top {
+    font-size: 0.8rem;
+    font-family: "Wendy One", serif;
+    font-weight: 400;
+    line-height: 0.8rem;
     right: 1rem;
     bottom: 1rem;
+    width: 50px;
+    height: 50px;
   }
 }
 
 .top:hover {
   background-color: #ff5d50;
+}
+
+.top.is-show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .btn {
@@ -300,12 +346,12 @@ label {
 
 .bg-main {
   padding-bottom: 117px;
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px calc(100% + 180px), url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat 100% 0/850.36px 768px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat -180px calc(100% + 180px), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg") no-repeat 100% 0/850.36px 768px;
 }
 
 @media screen and (max-width: 1128px) {
   .bg-main {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px calc(100% + 180px), url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg) no-repeat top top/60vw 768px;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat -180px calc(100% + 180px), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg") no-repeat top top/60vw 768px;
   }
 }
 
@@ -317,27 +363,27 @@ label {
 }
 
 .bg-lgb {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -180px -180px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat -180px -180px;
 }
 
 @media screen and (max-width: 768px) {
   .bg-lgb {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg) no-repeat -63px 10px/126px;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat -63px 10px/126px;
   }
 }
 
 .bg-rgt {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat calc(100% + 100px) calc(100% + 200px);
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg") no-repeat calc(100% + 100px) calc(100% + 200px);
 }
 
 @media screen and (max-width: 768px) {
   .bg-rgt {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat calc(100% + 47px) 100%/135px;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg") no-repeat calc(100% + 47px) 100%/135px;
   }
 }
 
 .bg-rgb {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg) no-repeat calc(100% + 100px) -117px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg") no-repeat calc(100% + 100px) -117px;
 }
 
 @media screen and (max-width: 768px) {
@@ -347,33 +393,33 @@ label {
 }
 
 .bg-lyf {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat 50px 140px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat 50px 140px;
 }
 
 @media screen and (max-width: 768px) {
   .bg-lyf {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat -76px 40px/153px;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat -76px 40px/153px;
   }
 }
 
 .bg-mf {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg) no-repeat top/100%;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg") no-repeat top/100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .bg-mf {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg) no-repeat top center, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/talk01.svg) no-repeat calc(100% - 10px) 35%/60px, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/talk04.svg) no-repeat 10% 50%/60px;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg") no-repeat top/100%;
   }
 }
 
 .bg-project {
   position: relative;
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg) no-repeat 100% 0;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg") no-repeat 100% 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .bg-project {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg) no-repeat 100% 0;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg") no-repeat 0 68px;
   }
 }
 
@@ -389,8 +435,21 @@ label {
   border-bottom-left-radius: 300px;
 }
 
+@media screen and (max-width: 768px) {
+  .bg-project::before {
+    top: 72px;
+    height: 495px;
+  }
+}
+
 .bg-lyh {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg) no-repeat -267px 318px/361px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat -267px 318px/361px;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-lyh {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat -108px 630px/204px;
+  }
 }
 
 nav {
@@ -413,8 +472,8 @@ nav {
     z-index: 3;
     width: 100%;
     background-color: #fff;
-    -webkit-box-shadow: 0 2px 2px #ffd153;
-            box-shadow: 0 2px 2px #ffd153;
+    -webkit-box-shadow: 0 2px 0 1px #ffd153;
+            box-shadow: 0 2px 0 1px #ffd153;
   }
 }
 
@@ -771,8 +830,21 @@ nav .logo img {
 }
 
 .footer-block {
-  padding: 260px 0  0;
+  position: relative;
+  padding-top: calc(max(18vw, 260px));
   text-align: center;
+}
+
+@media screen and (max-width: 1128px) {
+  .footer-block {
+    padding-top: calc(min(19vw, 260px));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-block {
+    padding-top: 352px;
+  }
 }
 
 .footer-block h2 {
@@ -796,6 +868,16 @@ nav .logo img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .project-list {
+    -webkit-column-gap: 6px;
+            column-gap: 6px;
+  }
 }
 
 .project-list li {
@@ -803,13 +885,28 @@ nav .logo img {
   font-family: "Comfortaa", serif;
   font-weight: 400;
   line-height: 1.625rem;
-  padding: 11px 31px;
+  padding: 11px calc(min(3.5vw, 31px));
+  white-space: nowrap;
   color: #56c4c5;
   border: 1px solid #56c4c5;
   border-radius: 27px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+  .project-list li {
+    font-size: 1rem;
+    font-family: "Comfortaa", serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding: 8px 16px;
+  }
 }
 
 .project-list li.is-active {
@@ -823,10 +920,6 @@ nav .logo img {
   border-color: #ff5d50;
 }
 
-.project-list li:not(:last-of-type) {
-  margin-right: 1rem;
-}
-
 .project-detail {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -834,11 +927,14 @@ nav .logo img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 1.3125rem;
-          column-gap: 1.3125rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem 1.3125rem;
 }
 
 .project-detail > li {
+  min-width: 355px;
+  background-color: #fff;
   border-radius: 0.75rem;
   -webkit-box-shadow: 0 2px 10px #00000014;
           box-shadow: 0 2px 10px #00000014;
@@ -856,8 +952,32 @@ nav .logo img {
   padding: 32px 23px 32px 29px;
 }
 
+@media screen and (max-width: 768px) {
+  .project-detail .project-info {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.project-detail .project-info li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .project-detail .project-info img {
+  margin-top: 4px;
   margin-right: 12.94px;
+  width: 19.56px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  .project-detail .project-info img {
+    margin-right: 16px;
+    width: 16px;
+    height: 14px;
+  }
 }
 
 .project-detail p {
@@ -886,10 +1006,24 @@ nav .logo img {
   margin-left: 21px;
 }
 
+@media screen and (max-width: 768px) {
+  .evaluate > p {
+    margin-right: 6px;
+    margin-left: 6px;
+  }
+}
+
 .evaluate-block {
-  padding: 24px 32px;
+  padding: 1.5rem 0;
+  min-width: 139px;
   background-color: #f5f5f5;
   border-radius: 0.75rem;
+}
+
+@media screen and (max-width: 768px) {
+  .evaluate-block {
+    padding: 1rem 0;
+  }
 }
 
 .evaluate-block h4 {
@@ -897,19 +1031,38 @@ nav .logo img {
   font-weight: 400;
   line-height: 1.0625rem;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 
 .evaluate-block p {
   font-size: 2rem;
+  font-family: "Comfortaa", serif;
   font-weight: 400;
   line-height: 2.1875rem;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .evaluate-block p {
+    font-size: 1.75rem;
+    font-family: "Comfortaa", serif;
+    font-weight: 400;
+    line-height: 2rem;
+  }
 }
 
 .evaluate-block sub {
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.0625rem;
+  vertical-align: middle;
   margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .evaluate-block sub {
+    margin-left: 0.25rem;
+  }
 }
 
 .faq li {
@@ -925,8 +1078,15 @@ nav .logo img {
   position: relative;
   padding: 1rem 2rem;
   cursor: pointer;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-q {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding: 1rem;
+  }
 }
 
 .faq-q::before, .faq-q::after {
@@ -940,6 +1100,16 @@ nav .logo img {
   right: 41px;
   width: 2px;
   height: 20px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-q::before {
+    top: calc(50% - 8px);
+    right: 23px;
+    height: 16px;
+  }
 }
 
 .faq-q::after {
@@ -949,18 +1119,31 @@ nav .logo img {
   height: 2px;
 }
 
+@media screen and (max-width: 768px) {
+  .faq-q::after {
+    right: 16px;
+    width: 16px;
+  }
+}
+
 .faq-q.is-open {
   color: #56c4c5;
   font-weight: 700;
 }
 
 .faq-q.is-open::before {
-  display: none;
+  height: 0;
 }
 
 .faq-q.is-open + .faq-a {
   padding: 8px 32px 32px;
   max-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-q.is-open + .faq-a {
+    padding: 0 1rem 1.5rem;
+  }
 }
 
 .faq-a {
@@ -973,6 +1156,12 @@ nav .logo img {
   color: #747474;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-a {
+    padding: 0 1rem;
+  }
 }
 
 .faq li:not(:last-of-type) {
@@ -1041,6 +1230,12 @@ nav .logo img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .main-img {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg) no-repeat 0/contain;
+  }
+}
+
 .main-img img {
   width: 100%;
   height: 534px;
@@ -1053,14 +1248,22 @@ nav .logo img {
   }
 }
 
+.project-text {
+  padding-top: 92px;
+  padding-bottom: 269px;
+}
+
 @media screen and (max-width: 768px) {
-  .main-img {
-    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg) no-repeat 0/contain;
+  .project-text {
+    padding-top: 120px;
+    min-height: 567px;
   }
 }
 
-.project-text {
-  padding: 92px 0 269px;
+.project-text h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 
 .p-1 {
@@ -19173,5 +19376,9 @@ nav .logo img {
 
 .circle {
   border-radius: 50%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 /*# sourceMappingURL=all.css.map */
